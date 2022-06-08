@@ -163,6 +163,11 @@ body {
     display: flex;
 }
 
+input[type='checkbox'] {
+    
+    border-radius: 50%;
+}
+
 .project-text p {
     margin: 5px 0;
     margin-left: 10px;
@@ -177,23 +182,3 @@ body {
     margin-right: 5px;
 }
 
-.completed {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #385f6f;
-    font-size: 1.2rem;
-    border-bottom: #385f6f 3px solid;
-}
-
-.completed button {
-    background-color: #385f6f;
-    border: none;
-    width: 70px;
-    height: 35px;
-    color: white;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
