@@ -57,8 +57,10 @@ table {
 
 .navigation {
     grid-column-start: 1;
+    background-color: #394867;
 }
 
 .task-container {
     grid-column-start: 2;
+    background-color: #14274E;
 }
