@@ -74,6 +74,7 @@ body {
     height: 100vh;
     margin-inline: auto;
     width: min(90%, 60rem);
+    margin: 50px;
 }
 
 .logo {
@@ -128,5 +129,65 @@ body {
 .all {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    color: #9bc4d6;
+    font-size: 1.2rem;
+    border-bottom: #9bc4d6 1px solid;
+}
+
+.all button {
+    background-color: transparent;
+    border-radius: 17px;
+    border: none;
+    width: 35px;
+    height: 35px;
+    color: #9bc4d6;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border: 1px solid #9bc4d6;
+}
+
+.all h2 {
+    margin-bottom: 10px;
+}
+
+.tasks {
+    margin-top: 20px;
+    display: flex;
+    border: white 1px solid;
     color: white;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.left-side {
+    display: flex;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.completed {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #9bc4d6;
+    font-size: 1.2rem;
+    border-bottom: #9bc4d6 1px solid;
+}
+
+.completed button {
+    background-color: transparent;
+    border: none;
+    width: 70px;
+    height: 35px;
+    color: #9bc4d6;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #9bc4d6;
 }
