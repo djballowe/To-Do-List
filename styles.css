@@ -50,3 +50,15 @@ table {
 
 /* Main CSS */
 
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.navigation {
+    grid-column-start: 1;
+}
+
+.task-container {
+    grid-column-start: 2;
+}
