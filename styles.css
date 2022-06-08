@@ -227,4 +227,13 @@ input[type='checkbox'] {
     margin-right: 10px;
 }
 
+.project-select {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 25px;
+}
 
+.project-select p {
+    margin-left: 10px;
+}
