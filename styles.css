@@ -125,6 +125,8 @@ body {
     margin-top: 20px;
 }
 
+/* Tasks */
+
 .all {
     display: flex;
     align-items: center;
@@ -182,3 +184,46 @@ input[type='checkbox'] {
     margin-right: 5px;
 }
 
+.projects {
+    display: none;
+    margin-top: 30px;
+    background-color: transparent;
+    border: white 2px solid;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects input {
+    background-color: transparent;
+    border: white 1px solid;
+    padding: 10px;
+}
+
+.projects-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.projects-buttons button {
+    width: 4rem;
+    height: 2rem;
+}
+
+#add {
+    color: green;
+    background-color: rgb(214, 248, 214);
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#cancel {
+    color: red;
+    background-color: rgb(248, 214, 214);
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+}
