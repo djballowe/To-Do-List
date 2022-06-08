@@ -1,6 +1,12 @@
+:root {
+    --main-color: #14274E;
+    --secondary-color: #394867;
+    --text-color: #F1F6F9;
+}
+
 html {
     box-sizing: border-box;
-    
+    font-family: 'Inter', sans-serif;
 }
 
 html, body, div, span, applet, object, iframe,
