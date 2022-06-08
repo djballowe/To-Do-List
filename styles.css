@@ -187,7 +187,7 @@ input[type='checkbox'] {
 /* add project popup */
 
 .projects {
-    display: flex;
+    display: none;
     margin-top: 30px;
     background-color: transparent;
     border: white 2px solid;
@@ -235,6 +235,11 @@ input[type='checkbox'] {
     justify-content: space-between;
     margin-top: 30px;
     font-size: 25px;
+}
+
+#name {
+    display: flex;
+    align-items: center;
 }
 
 .project-select p {
