@@ -314,6 +314,10 @@ input {
     border: 1px solid rgba(0, 0, 0, 0.267);
 }
 
+#detail {
+    
+}
+
 #overlay {
     display: block;
     position: fixed;
