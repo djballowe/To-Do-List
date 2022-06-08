@@ -237,3 +237,90 @@ input[type='checkbox'] {
 .project-select p {
     margin-left: 10px;
 }
+
+/* add popup */
+
+.pop-up {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.form-popup {
+    display: block;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.read {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.read p {
+    margin-right: 20px;
+}
+
+#submit {
+    background-color: rgba(150, 219, 150, 0.784);
+    color: black;
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+    height: 40px;
+    width: 200px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#close {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    transition: .19s ease-in; 
+}
+
+#close:hover {
+    color: white;
+    background-color: black;
+}
+
+input {
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+}
+
+#overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}

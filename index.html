@@ -11,6 +11,18 @@
     <title>To Do List</title>
 </head>
 <body>
+    <div class="pop-up" id="pop-up">
+        <div class="form-popup" id="form">
+            <form class="form-container" id="form-container">
+                <button id="close">X</button>
+                <h2>New Task</h2>
+                    <input type="text" placeholder="Title" id="title" name="title" required>
+                    <input type="text" placeholder="Details" id="detail" name="detail" required> 
+                    <input type="date" placeholder="Date" id="date" name="date" required>  
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
     <div class="main-grid">
         <div class="navigation">
             <div class="logo">
@@ -87,5 +99,6 @@
             </div>
         </div>
     </div>
+    <div id="overlay"></div>
 </body>
 </html>
