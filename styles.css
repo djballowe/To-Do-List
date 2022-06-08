@@ -1,7 +1,7 @@
 :root {
-    --main-color: #14274E;
-    --secondary-color: #394867;
-    --text-color: #F1F6F9;
+    --main-color: #143A52;
+    --secondary-color: #6E828A;
+    --text-color: #CDE3EB;
 }
 
 html {
@@ -50,17 +50,83 @@ table {
 
 /* Main CSS */
 
+body {
+    background-color: #17405b;
+}
+
 .main-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
 }
+
+/* Navigation Bar */
 
 .navigation {
     grid-column-start: 1;
-    background-color: #394867;
+    background-color: #385f6f;
+    padding: 30px;
+    color: white;
 }
 
 .task-container {
     grid-column-start: 2;
-    background-color: #14274E;
+    background-color: #17405b;
+    height: 100vh;
+    margin-inline: auto;
+    width: min(90%, 60rem);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+#todo {
+    color: #9bc4d6;
+    margin-left: 10px;
+}
+
+.icon-container {
+    border-top: #9bc4d6 1px solid;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.icons p {
+    margin-left: 10px;
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: #9bc4d6 1px solid;
+    
+}
+
+.project-container button {
+    background-color: #9bc4d6;
+    border-radius: 17px;
+    border: none;
+    width: 35px;
+    height: 35px;
+    color: black;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.project-container h1 {
+    margin-top: 20px;
+}
+
+.all {
+    display: flex;
+    align-items: center;
+    color: white;
 }
