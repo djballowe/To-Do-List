@@ -184,6 +184,8 @@ input[type='checkbox'] {
     margin-right: 5px;
 }
 
+/* add project popup */
+
 .projects {
     display: flex;
     margin-top: 30px;
@@ -230,6 +232,7 @@ input[type='checkbox'] {
 .project-select {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-top: 30px;
     font-size: 25px;
 }
@@ -238,7 +241,7 @@ input[type='checkbox'] {
     margin-left: 10px;
 }
 
-/* add popup */
+/* add task popup */
 
 .pop-up {
     position: relative;
@@ -247,7 +250,7 @@ input[type='checkbox'] {
 }
 
 .form-popup {
-    display: block;
+    display: none;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -285,7 +288,7 @@ input[type='checkbox'] {
     font-size: 25px;
     height: 40px;
     width: 200px;
-    margin-top: 40px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -314,12 +317,8 @@ input {
     border: 1px solid rgba(0, 0, 0, 0.267);
 }
 
-#detail {
-    
-}
-
 #overlay {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -328,3 +327,5 @@ input {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9;
 }
+
+
