@@ -145,6 +145,7 @@ body {
     color: white;
     font-size: 1rem;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .all h2 {
