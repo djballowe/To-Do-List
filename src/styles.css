@@ -200,8 +200,12 @@ body {
 
 /* new task pop up */
 
-.new-task-popup {
+#new {
     display: none;
+}
+
+.new-task-popup {
+    transition: max-height 0.8s ease-out, opacity 300ms ease-in-out;
 }
 
 .project-input {
@@ -252,6 +256,7 @@ body {
     margin-right: 10px;
     width: 4rem;
     height: 2rem;
+    cursor: pointer;
 }
 
 .cancel {
@@ -262,6 +267,7 @@ body {
     margin-right: 10px;
     width: 4rem;
     height: 2rem;
+    cursor: pointer;
 }
 
 .project-select {

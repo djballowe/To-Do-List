@@ -1,31 +1,27 @@
 
 
-const addTaskPopUp = () => {
-    const overlay = document.getElementById('overlay');
+const taskPopUp = () => {
+    const form = document.getElementById('new');
 
-    const clickOverlay = () => {
-        document.getElementById('form').style.display = 'none';
-        overlay.style.display = 'none';
-    }    
     
-    const form = () => {
-        document.getElementById('form').style.display = 'block';
-        overlay.style.display = 'block';
+    const task = () => {
+        form.style.display = 'flex';
     }
 
-    const close = () => {
-        document.getElementById('form').style.display = 'none';
-        overlay.style.display = 'none';
-        document.getElementById('title').value = '';
-        document.getElementById('detail').value = '';
-        document.getElementById('date').value = '';
+    const add = () => {
+        // add the reminder to the dom
+    }
+
+    const cancel = () => {
+        form.style.display = 'none';
+
     }
 
     return {
-        clickOverlay,
-        form,
-        close
+        task,
+        add,
+        cancel
     }
 }
 
-export { addTaskPopUp };
+export { taskPopUp };
