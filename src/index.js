@@ -14,6 +14,8 @@ document.querySelector('body').addEventListener('click', function(e) {
         console.log('test')
     } else if (id === 'cancel') {
         task.cancel();
+    } else if (id === 'add') {
+        // put it in an array 
     }
     
 })
