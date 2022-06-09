@@ -11,7 +11,6 @@ const addTaskPopUp = () => {
     const form = () => {
         document.getElementById('form').style.display = 'block';
         overlay.style.display = 'block';
-        console.log('test');
     }
 
     const close = () => {

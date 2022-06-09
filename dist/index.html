@@ -11,18 +11,6 @@
     <title>To Do List</title>
 </head>
 <body>
-    <div class="pop-up" id="pop-up">
-        <div class="form-popup" id="form">
-            <form class="form-container" id="form-container">
-                <button id="close">X</button>
-                <h2>New Task</h2>
-                    <input type="text" placeholder="Title" id="title" name="title" required>
-                    <textarea id="detail" name="detail" placeholder="Details" rows="4" cols="28"></textarea>
-                    <input type="date" placeholder="Date" id="date" name="date" required>  
-                <button id="submit">Submit</button>
-            </form>
-        </div>
-    </div>
     <div class="main-grid">
         <div class="navigation">
             <div class="logo">
@@ -88,20 +76,45 @@
                 <h2>All</h2>
                 <button id="add-task">+</button>
             </div>
+            <!-- populate tasks here -->
             <div class="tasks">
-                <!-- populate tasks here -->
-                <div class="left-side">
-                    <button class="check" type="button"></button>
-                    <div class="project-text">
-                        <p>Project</p>
-                        <p>Project description</p>
+                <div class="new-task">
+                    <div class="left-side">
+                        <button class="check" type="button"></button>
+                        <div class="project-text">
+                            <p>Project</p>
+                            <p>Project description</p>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <p>Date</p>
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+                        </svg>
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" />
+                        </svg>
                     </div>
                 </div>
-                <div class="info">
-                    <p>Date</p>
-                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
-                    </svg>
+                <!-- new task pop up -->
+                <div class="new-task">
+                    <div class="left-side">
+                        <button class="check" type="button"></button>
+                        <div class="project-input">
+                            <input type="text" placeholder="Title">
+                            
+                            <input type="text" placeholder="Notes">
+                        </div>
+                    </div>
+                    <div class="info">
+                        <input type="date" id="date">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+                        </svg>
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>

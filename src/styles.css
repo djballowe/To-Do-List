@@ -153,12 +153,17 @@ body {
 }
 
 .tasks {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-task {
     margin-top: 20px;
     display: flex;
-    border: black 2px solid;
+    border-bottom: black 2px solid;
+    border-top: black 2px solid;
     color: black;
     justify-content: space-between;
-    border-radius: 5px;
     padding: 20px;
 }
 
@@ -192,6 +197,12 @@ input[type='checkbox'] {
 .info {
     display: flex;
     align-items: center;
+}
+
+.project-input {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 }
 
 .info p {

@@ -11,8 +11,6 @@ console.log('test');
 document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     
-    if (id === 'add-task') {
-       task.form;
-    }
+    
 })
 
