@@ -163,6 +163,19 @@ body {
 
 .left-side {
     display: flex;
+    align-items: center;
+}
+
+.left-side button {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 20px;
+    background-color: transparent;
+    border: solid black 2px;
+    cursor: pointer;
+    background-image: url(file:///home/david/GitHub/To-Do-List/src/check.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 input[type='checkbox'] {
