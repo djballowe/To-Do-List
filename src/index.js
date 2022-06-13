@@ -1,4 +1,5 @@
 import { addTaskProjects } from "./taskPopUp"
+import { focusEffects } from "./taskPopUp"
 
 
 
@@ -26,7 +27,7 @@ document.querySelector('body').addEventListener('click', function(e) {
             task.cancel();
             break;
         case 'all':
-
+            focusEffects(id);
     }
 })
 

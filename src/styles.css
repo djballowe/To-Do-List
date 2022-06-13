@@ -105,6 +105,16 @@ body {
     background-color: #7c8e99fe;
 }
 
+.icons-active {
+    background-color: #7c8e99fe;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .icons p {
     margin-left: 10px;
 }

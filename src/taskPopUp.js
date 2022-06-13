@@ -10,10 +10,6 @@ const addTaskProjects = () => {
         form.style.display = 'flex';
     }
 
-    const add = () => {
-        // add the reminder to the dom
-    }
-
     const cancel = () => {
         console.log('cancel');
         form.style.display = 'none';
@@ -23,14 +19,9 @@ const addTaskProjects = () => {
     const project = () => {
         projectForm.style.display = 'block';
     }
-
-    const all = () => {
-
-    }
     
     return {
         task,
-        add,
         cancel,
         project
     }
