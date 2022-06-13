@@ -1,4 +1,4 @@
-let arr = [];
+export let arr = [];
 
 function taskCreator(task, about, day) {
     return {
@@ -14,7 +14,6 @@ function getData() {
     const description = document.getElementById('description').value;
     const date = document.getElementById('date').value;
     arr.push(taskCreator(title, description, date));
-    console.log(arr);
 }
 
 

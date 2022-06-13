@@ -1,6 +1,6 @@
 import { addTaskProjects } from "./taskPopUp"
 import { focusEffects } from "./icons"
-import { taskCreator, getData } from "./addingtask"
+import { getData } from "./addingtask"
 
 
 
