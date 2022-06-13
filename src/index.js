@@ -29,12 +29,16 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
         case 'all':
             focusEffects(id);
+            break;
         case 'inbox':
             focusEffects(id);
+            break;
         case 'today':
             focusEffects(id);
+            break;
         case 'upcoming':
             focusEffects(id);
+            break;
     }
 })
 

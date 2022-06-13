@@ -1,5 +1,5 @@
 
-//Dom manipulation only
+//Dom pop ups for adding projects and tasks
 
 const addTaskProjects = () => {
     const form = document.getElementById('new');
