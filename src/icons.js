@@ -1,21 +1,26 @@
 // switching the active styles 
 
-function focusEffects(id) {
+function focusEffects(click) {
     let iconClass = [{
-        id: 'all',
+        clickid: 'all',
         class: 'icons-active'
     }, {
-        id: 'inbox',
+        clickid: 'inbox',
         class: 'icons'
     }, {
-        id: 'today',
+        clickid: 'today',
         class: 'icons'
     }, {
-        id: 'upcoming',
+        clickid: 'upcoming',
         class: 'icons'
     }];
     
     
-    const icon = document.getElementById(id);
+    const icon = document.getElementById(click);
+    const active = iconClass.find(e => e.class === 'icons-active');
     
+    icon.class = 'icons-active';
+    active.class = 'icons';
 }
+
+export { focusEffects };
