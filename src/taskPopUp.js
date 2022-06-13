@@ -15,15 +15,13 @@ const taskPopUp = () => {
 
     const cancel = () => {
         console.log('cancel');
-        form.style.display === 'none';
-        projectForm.style.display === 'none';
+        form.style.display = 'none';
+        projectForm.style.display = 'none';
     }
 
     const project = () => {
         projectForm.style.display = 'block';
     }
-
-
 
     return {
         task,
