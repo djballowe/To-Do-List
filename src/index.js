@@ -1,5 +1,6 @@
 import { addTaskProjects } from "./taskPopUp"
 import { focusEffects } from "./icons"
+import { taskCreator } from "./addingtask"
 
 
 
@@ -21,7 +22,8 @@ document.querySelector('body').addEventListener('click', function(e) {
             task.cancel();
             break;
         case 'add':
-            // put in array
+            console.log(taskCreator('test', 'this is a test description', '7/5/2025'));
+            break;
         case 'project-add':
             task.project();
             break;
