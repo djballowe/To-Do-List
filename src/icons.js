@@ -1,34 +1,29 @@
-// switching the active styles 
+// switching the active highlights
+
 let iconClass = [{
-    clickid: 'all',
+    id: 'all',
     class: 'icons-active'
 }, {
-    clickid: 'inbox',
+    id: 'inbox',
     class: 'icons'
 }, {
-    clickid: 'today',
+    id: 'today',
     class: 'icons'
 }, {
-    clickid: 'upcoming',
+    id: 'upcoming',
     class: 'icons'
 }];
 
 function focusEffects(click) {
-    
-    
     const icon = document.getElementById(click);
     const active = iconClass.find(e => e.class === 'icons-active');
-    const nowActive = iconClass.find(e => e.clickid === `${click}`);
-    const highlight = document.getElementById(`${active.clickid}`);
+    const nowActive = iconClass.find(e => e.id === `${click}`);
+    const highlight = document.getElementById(`${active.id}`);
     
     icon.classList.add('icons-active');
     highlight.classList.toggle('icons-active');
     active.class = 'icons';
     nowActive.class = 'icons-active';
-
-    console.log(iconClass);
-    console.log(active.clickid);
-
 }
 
 export { focusEffects };

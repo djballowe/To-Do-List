@@ -10,6 +10,7 @@ const task = addTaskProjects();
 
 document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
+    const data = e.target.getAttribute('data');
     
     
     switch (id) {
@@ -27,16 +28,10 @@ document.querySelector('body').addEventListener('click', function(e) {
         case 'project-cancel':
             task.cancel();
             break;
-        case 'all':
-            focusEffects(id);
-            break;
-        case 'inbox':
-            focusEffects(id);
-            break;
-        case 'today':
-            focusEffects(id);
-            break;
-        case 'upcoming':
+    }
+
+    switch (data) {
+        case 'organize':
             focusEffects(id);
             break;
     }
