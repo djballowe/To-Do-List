@@ -190,6 +190,11 @@ body {
     align-items: center;
 }
 
+.left-create {
+    display: flex;
+    align-items: center;
+}
+
 .left-side button {
     height: 2rem;
     width: 2rem;
@@ -212,6 +217,11 @@ body {
     align-items: center;
 }
 
+.info-popup {
+    display: flex;
+    align-items: center;
+}
+
 .info p {
     margin-right: 5px;
 }
@@ -230,6 +240,13 @@ body {
     transition-duration: 0.8s, 300ms;
     transition-timing-function: ease-out, ease-in-out;
     transition-delay: 0s, 0s;
+    margin-top: 20px;
+    display: flex;
+    border-bottom: black 2px solid;
+    border-top: black 2px solid;
+    color: black;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .project-input {
