@@ -9,14 +9,22 @@ const task = taskPopUp();
 document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     
-    if (id === 'add-task') {
-        task.task();
-        console.log('test')
-    } else if (id === 'cancel') {
-        task.cancel();
-    } else if (id === 'add') {
-        // put it in an array 
-    }
     
+    switch (id) {
+        case 'add-task':
+            task.task();
+            break;
+        case 'cancel':
+            task.cancel();
+            break;
+        case 'add':
+            // put in array
+        case 'project-add':
+            task.project();
+            break;
+        case 'project-cancel':
+            task.cancel();
+            break;
+    }
 })
 
