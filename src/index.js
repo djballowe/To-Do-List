@@ -1,6 +1,6 @@
 import { addTaskProjects } from "./taskPopUp"
 import { focusEffects } from "./icons"
-import { taskCreator } from "./addingtask"
+import { taskCreator, getData } from "./addingtask"
 
 
 
@@ -22,7 +22,8 @@ document.querySelector('body').addEventListener('click', function(e) {
             task.cancel();
             break;
         case 'add':
-            console.log(taskCreator('test', 'this is a test description', '7/5/2025'));
+            getData();
+            task.cancel();
             break;
         case 'project-add':
             task.project();
@@ -38,4 +39,6 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
     }
 })
+
+
 

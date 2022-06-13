@@ -13,6 +13,7 @@ const addTaskProjects = () => {
     const cancel = () => {
         form.style.display = 'none';
         projectForm.style.display = 'none';
+        
     }
 
     const project = () => {

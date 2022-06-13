@@ -9,10 +9,14 @@ function taskCreator(task, about, day) {
     }
 }
 
-function addObject() {
-    arr.push(taskCreator())
+function getData() {
+    const title = document.getElementById('title').value
+    const description = document.getElementById('description').value;
+    const date = document.getElementById('date').value;
+    arr.push(taskCreator(title, description, date));
+    console.log(arr);
 }
 
 
 
-export { taskCreator, addObject }
+export { taskCreator, getData }
