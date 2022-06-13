@@ -18,4 +18,4 @@ function getData() {
 
 
 
-export { taskCreator, getData }
+export { getData }

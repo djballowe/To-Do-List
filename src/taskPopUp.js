@@ -15,6 +15,7 @@ const addTaskProjects = () => {
         const title = document.getElementById('title');
         const description = document.getElementById('description');
         const date = document.getElementById('date');
+        const project = document.getElementById('project-popup');
         
         form.style.display = 'none';
         projectForm.style.display = 'none';
@@ -22,7 +23,7 @@ const addTaskProjects = () => {
         title.value = '';
         description.value = '';
         date.value = '';
-
+        project.value = '';
     }
 
     const project = () => {

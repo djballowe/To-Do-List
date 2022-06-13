@@ -1,6 +1,7 @@
 import { addTaskProjects } from "./taskPopUp"
 import { focusEffects } from "./icons"
 import { getData } from "./addingtask"
+import { taskDOM } from "./addingtaskDOM"
 
 
 
@@ -23,6 +24,7 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
         case 'add':
             getData();
+            taskDOM();
             task.cancel();
             break;
         case 'project-add':
