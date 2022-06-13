@@ -95,7 +95,14 @@ body {
 .icons {
     display: flex;
     align-items: center;
-    margin: 30px 0;
+    margin: 20px 0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.icons:hover {
+    background-color: #7c8e99fe;
 }
 
 .icons p {
@@ -281,8 +288,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.project-select:hover {
+    background-color: #7c8e99fe;
 }
 
 #name {

@@ -1,6 +1,7 @@
 
+//Dom manipulation only
 
-const taskPopUp = () => {
+const addTaskProjects = () => {
     const form = document.getElementById('new');
     const projectForm = document.getElementById('project-popup');
 
@@ -23,6 +24,10 @@ const taskPopUp = () => {
         projectForm.style.display = 'block';
     }
 
+    const all = () => {
+
+    }
+    
     return {
         task,
         add,
@@ -31,4 +36,4 @@ const taskPopUp = () => {
     }
 }
 
-export { taskPopUp };
+export { addTaskProjects };

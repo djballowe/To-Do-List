@@ -1,8 +1,8 @@
-import { taskPopUp } from "./taskPopUp"
+import { addTaskProjects } from "./taskPopUp"
 
 
 
-const task = taskPopUp();
+const task = addTaskProjects();
 
 // all button and event listeners
 
@@ -25,6 +25,8 @@ document.querySelector('body').addEventListener('click', function(e) {
         case 'project-cancel':
             task.cancel();
             break;
+        case 'all':
+
     }
 })
 
