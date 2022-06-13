@@ -323,5 +323,13 @@ body {
     align-items: center;
 }
 
+#veryImportant {
+    display: none;
+}
+
+#star {
+    display: block;
+}
+
 
 

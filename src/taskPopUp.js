@@ -11,7 +11,6 @@ const addTaskProjects = () => {
     }
 
     const cancel = () => {
-        console.log('cancel');
         form.style.display = 'none';
         projectForm.style.display = 'none';
     }

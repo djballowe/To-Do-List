@@ -4,7 +4,7 @@ let iconClass = [{
     id: 'all',
     class: 'icons-active'
 }, {
-    id: 'inbox',
+    id: 'important',
     class: 'icons'
 }, {
     id: 'today',
