@@ -248,6 +248,11 @@ body {
     margin-right: 5px;
 }
 
+.info div {
+    padding: 0 5px;
+    cursor: pointer;
+}
+
 /* new task pop up */
 
 #new {
