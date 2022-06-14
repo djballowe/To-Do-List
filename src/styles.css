@@ -364,8 +364,11 @@ body {
 
 .displayed {
     display: block;
+    z-index: 100;
 }
 
 .not-displayed {
     display: none;
 }
+
+

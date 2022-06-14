@@ -34,8 +34,8 @@ function taskDOM() {
         info.appendChild(elementFactory('p', 'none', `${arr[index].date}`));
         info.appendChild(elementFactory('div', {id: `star-${index}`, class: 'displayed', data: 'not-important'}));
         document.querySelector(`#star-${index}`).appendChild(elementFactory('img', {src: "../src/star.svg", index: `${index}`, data: 'not-important'}));
-        info.appendChild(elementFactory('div', {id: `important-${index}`, class: 'not-displayed'}));
-        document.querySelector(`#important-${index}`).appendChild(elementFactory('img', {src: "../src/star-check.svg"}));
+        info.appendChild(elementFactory('div', {id: `important-${index}`, class: 'not-displayed', data: 'important'}));
+        document.querySelector(`#important-${index}`).appendChild(elementFactory('img', {src: "../src/star-check.svg", index: `${index}`, data: 'important'}));
         info.appendChild(elementFactory('div', {id: `dots-${index}`}));
         document.querySelector(`#dots-${index}`).appendChild(elementFactory('img', {src: "../src/dots.svg", index: `${index}`}));
         

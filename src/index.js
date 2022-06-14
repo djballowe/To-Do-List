@@ -17,7 +17,8 @@ document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
-    
+    console.log(index);
+
     switch (id) {
         case 'add-task':
             task.task();
@@ -52,9 +53,12 @@ document.querySelector('body').addEventListener('click', function(e) {
             check.uncompletedArray(index);
             break;
         case 'not-important':
-            priority.starDom(index);
+            priority.starDom(index, data);
+            break;
         case 'important':
-            priority.starDom(index);
+            priority.starDom(index, data);
+            console.log('important');
+            break;
     }
 })
 
