@@ -43,8 +43,8 @@ document.querySelector('body').addEventListener('click', function(e) {
             focusEffects(id);
             break;
         case 'importance':
-            priority.changeCheck();
-            priority.importantArray(index);
+            priority.changeCheck(id);
+            
     }
 })
 

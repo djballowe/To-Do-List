@@ -202,7 +202,6 @@ body {
     background-color: transparent;
     border: solid black 2px;
     cursor: pointer;
-    background-image: url(file:///home/david/GitHub/To-Do-List/src/check.png);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -211,6 +210,7 @@ body {
     height: 2rem;
     width: 2rem;
     border-radius: 20px;
+    background-image: url(file:///home/david/GitHub/To-Do-List/src/check.png);
     background-color: transparent;
     border: solid black 2px;
     cursor: pointer;

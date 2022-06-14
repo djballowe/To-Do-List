@@ -17,6 +17,7 @@ function importance() {
         } else {
             arr[index].importance = true;
         }
+        console.log(arr);
     }
     return {
         changeCheck,
