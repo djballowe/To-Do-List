@@ -17,8 +17,21 @@ function important() {
             isImportant.classList.toggle('displayed');
         }
     }
+
+    const changePrio = (index, data) => {
+        if (data === 'not-important') {
+            arr[index].importance = true;
+            console.log('should be true')
+        } else if (data === 'important') {
+            arr[index].importance = false;
+            console.log('should be false')
+        }
+        console.log(arr);
+    }
+
     return {
-        starDom
+        starDom,
+        changePrio
     }
 }
 

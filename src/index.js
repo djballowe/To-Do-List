@@ -17,7 +17,7 @@ document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
-    console.log(index);
+    console.log(data);
 
     switch (id) {
         case 'add-task':
@@ -54,10 +54,11 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
         case 'not-important':
             priority.starDom(index, data);
+            priority.changePrio(index, data);
             break;
         case 'important':
             priority.starDom(index, data);
-            console.log('important');
+            priority.changePrio(index, data);
             break;
     }
 })
