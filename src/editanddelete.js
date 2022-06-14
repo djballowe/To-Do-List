@@ -1,5 +1,7 @@
-import { addMilliseconds } from "date-fns";
+import { addTaskProjects } from "./taskPopUp"
 import { arr } from "./addingtask"
+
+const taskPop = addTaskProjects();
 
 function taskIconFunctions() {
     const trash = (index) => {
@@ -15,12 +17,24 @@ function taskIconFunctions() {
         }
         container.remove();
     }
-    return {
-        trash
-    }
-
+    
     const edit = (index) => {
+        const title = document.getElementById('title');
+        const description = document.getElementById('description');
+        const date = document.getElementById('date');
+        
+        trash(index);
+        
+        title.value = `${arr[index].title}`
+        description.value = `${arr[index].description}`
+        date.value = `${arr[index].date}`
+        taskPop.task();
 
+    }
+    
+    return {
+        trash,
+        edit
     }
 }
 
