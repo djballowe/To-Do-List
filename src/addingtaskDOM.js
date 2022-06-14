@@ -1,4 +1,4 @@
-import { arr } from "./addingtask"
+import { arr } from "./taskobjectfunctions"
 
 // adding tasks to the dom
 
@@ -43,6 +43,7 @@ function taskDOM() {
         
         break;
     }
+    return { elementFactory }
 }
 
 export { taskDOM }

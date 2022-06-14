@@ -1,5 +1,5 @@
 import { addTaskProjects } from "./taskPopUp"
-import { arr, deleteObject } from "./addingtask"
+import { arr, deleteObject } from "./taskobjectfunctions"
 
 const taskPop = addTaskProjects();
 

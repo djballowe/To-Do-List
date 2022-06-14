@@ -1,4 +1,4 @@
-import { arr } from "./addingtask"
+import { arr } from "./taskobjectfunctions"
 
 function important() {
     const starDom = (index, data) => {
