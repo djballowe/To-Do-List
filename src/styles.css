@@ -362,7 +362,7 @@ body {
     align-items: center;
 }
 
-#veryImportant {
+.important {
     display: none;
 }
 

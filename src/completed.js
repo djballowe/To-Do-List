@@ -22,7 +22,6 @@ function completed() {
     }
 
     const completedArray = (index) => {
-        console.log('complete run')
         doneTask.push(arr[index]);
         arr.splice(index, 1);
         console.log(arr);
@@ -30,7 +29,6 @@ function completed() {
     }
 
     const uncompletedArray = (index) => {
-        console.log('uncomplete run')
         arr.push(doneTask[index]);
         doneTask.splice(index, 1);
         console.log(arr);
