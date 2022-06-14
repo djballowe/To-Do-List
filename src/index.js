@@ -5,8 +5,10 @@ import { taskDOM } from "./addingtaskDOM"
 import { arr } from "./addingtask"
 import { completed } from "./completed"
 import { important } from "./important"
+import { taskIconFunctions } from "./editanddelete"
 
 
+const editDelete = taskIconFunctions();
 const priority = important();
 const check = completed();
 const task = addTaskProjects();
@@ -60,6 +62,9 @@ document.querySelector('body').addEventListener('click', function(e) {
             priority.starDom(index, data);
             priority.changePrio(index, data);
             break;
+        case 'trash':
+            editDelete.trash(index);
+
     }
 })
 
