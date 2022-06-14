@@ -32,12 +32,12 @@ function taskDOM() {
         
         const info = document.querySelector(`#info-${index}`);
         info.appendChild(elementFactory('p', 'none', `${arr[index].date}`));
-        info.appendChild(elementFactory('div', {id: `star-${index}`}));
-        document.querySelector(`#star-${index}`).appendChild(elementFactory('img', {src: "../src/star.svg"}));
-        info.appendChild(elementFactory('div', {id: `important-${index}`, class: 'important'}));
+        info.appendChild(elementFactory('div', {id: `star-${index}`, class: 'displayed', data: 'not-important'}));
+        document.querySelector(`#star-${index}`).appendChild(elementFactory('img', {src: "../src/star.svg", index: `${index}`, data: 'not-important'}));
+        info.appendChild(elementFactory('div', {id: `important-${index}`, class: 'not-displayed'}));
         document.querySelector(`#important-${index}`).appendChild(elementFactory('img', {src: "../src/star-check.svg"}));
         info.appendChild(elementFactory('div', {id: `dots-${index}`}));
-        document.querySelector(`#dots-${index}`).appendChild(elementFactory('img', {src: "../src/dots.svg"}));
+        document.querySelector(`#dots-${index}`).appendChild(elementFactory('img', {src: "../src/dots.svg", index: `${index}`}));
         
         break;
     }

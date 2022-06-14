@@ -362,10 +362,10 @@ body {
     align-items: center;
 }
 
-.important {
-    display: none;
+.displayed {
+    display: block;
 }
 
-#star {
-    display: block;
+.not-displayed {
+    display: none;
 }

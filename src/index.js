@@ -4,10 +4,11 @@ import { getData } from "./addingtask"
 import { taskDOM } from "./addingtaskDOM"
 import { arr } from "./addingtask"
 import { completed } from "./completed"
+import { important } from "./important"
 
 
-
-const priority = completed();
+const priority = important();
+const check = completed();
 const task = addTaskProjects();
 
 // all button and event listeners
@@ -43,13 +44,17 @@ document.querySelector('body').addEventListener('click', function(e) {
             focusEffects(id);
             break;
         case 'non-completed':
-            priority.changeCheck(id, index);
-            priority.completedArray(index);
+            check.changeCheck(id, index);
+            check.completedArray(index);
             break;
         case 'completed':
-            priority.changeCheck(id, index);
-            priority.uncompletedArray(index);
+            check.changeCheck(id, index);
+            check.uncompletedArray(index);
             break;
+        case 'not-important':
+            priority.starDom(index);
+        case 'important':
+            priority.starDom(index);
     }
 })
 
