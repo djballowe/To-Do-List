@@ -1,5 +1,5 @@
 import { addTaskProjects } from "./taskPopUp"
-import { arr } from "./addingtask"
+import { arr, deleteObject } from "./addingtask"
 
 const taskPop = addTaskProjects();
 
@@ -24,6 +24,7 @@ function taskIconFunctions() {
         const date = document.getElementById('date');
         
         trash(index);
+        deleteObject(index);
         
         title.value = `${arr[index].title}`
         description.value = `${arr[index].description}`

@@ -16,6 +16,10 @@ function getData() {
     arr.push(taskCreator(title, description, date));
 }
 
+function deleteObject(index) {
+    arr.splice(index, 1);
+}
 
 
-export { getData }
+
+export { getData, deleteObject }

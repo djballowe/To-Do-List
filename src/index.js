@@ -5,7 +5,7 @@ import { taskDOM } from "./addingtaskDOM"
 import { arr } from "./addingtask"
 import { completed } from "./completed"
 import { important } from "./important"
-import { taskIconFunctions } from "./editanddelete"
+import { taskIconFunctions } from "./editanddeleteDOM"
 
 
 const editDelete = taskIconFunctions();
@@ -19,7 +19,6 @@ document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
-    console.log(data);
 
     switch (id) {
         case 'add-task':
