@@ -19,12 +19,12 @@ function taskDOM() {
     for (let i = 0; i < arr.length; i++) {
         let index = arr.length - 1;
 
-        document.querySelector('.tasks').appendChild(elementFactory('div', {class: 'new-task', id: `task-${index}`}));
+        document.querySelector('.tasks').appendChild(elementFactory('div', {class: 'new-task', id: `task-${index}`, index: `${index}`}));
         document.querySelector(`#task-${index}`).appendChild(elementFactory('div', {class: 'left-side', id: `left-${index}`}));
         document.querySelector(`#task-${index}`).appendChild(elementFactory('div', {class: 'info', id: `info-${index}`}))
 
         const left = document.querySelector(`#left-${index}`);
-        left.appendChild(elementFactory('button', {type: 'button', id: `check-${index}`, data: 'importance', index: `${index}`}));
+        left.appendChild(elementFactory('button', {type: 'button', id: `check-${index}`, data: 'non-completed', index: `${index}`}));
         left.appendChild(elementFactory('div', {class: 'project-text', id: `project-${index}`}))
 
         document.querySelector(`#project-${index}`).appendChild(elementFactory('p', 'none', `${arr[index].title}`));

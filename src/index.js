@@ -3,11 +3,11 @@ import { focusEffects } from "./icons"
 import { getData } from "./addingtask"
 import { taskDOM } from "./addingtaskDOM"
 import { arr } from "./addingtask"
-import { importance } from "./importance"
+import { completed } from "./completed"
 
 
 
-const priority = importance();
+const priority = completed();
 const task = addTaskProjects();
 
 // all button and event listeners
@@ -16,6 +16,7 @@ document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
+    console.log(data);
     
     switch (id) {
         case 'add-task':
@@ -42,9 +43,14 @@ document.querySelector('body').addEventListener('click', function(e) {
         case 'organize':
             focusEffects(id);
             break;
-        case 'importance':
-            priority.changeCheck(id);
-            
+        case 'non-completed':
+            priority.changeCheck(id, index);
+            priority.completedArray(index);
+            break;
+        case 'completed':
+            priority.changeCheck(id, index);
+            priority.uncompletedArray(index);
+            break;
     }
 })
 

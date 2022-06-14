@@ -185,6 +185,17 @@ body {
     padding: 20px;
 }
 
+.completed-task {
+    margin-top: 20px;
+    display: flex;
+    border-bottom: rgba(0, 0, 0, 0.473) 2px solid;
+    border-top: rgba(0, 0, 0, 0.473) 2px solid;
+    color: rgba(0, 0, 0, 0.473);
+    justify-content: space-between;
+    padding: 20px;
+    text-decoration: line-through;
+}
+
 .left-side {
     display: flex;
     align-items: center;
