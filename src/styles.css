@@ -404,6 +404,21 @@ body {
     display: none;
 }
 
-/* drop down menu for tasks */
+/* page switching by category */
 
+#cat-all {
+    display: block;
+}
+
+#cat-important {
+    display: none;
+}
+
+#cat-upcoming {
+    display: none;
+}
+
+#cat-today {
+    display: none;
+}
 

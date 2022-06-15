@@ -24,6 +24,12 @@ function focusEffects(click) {
     highlight.classList.toggle('icons-active');
     active.class = 'icons';
     nowActive.class = 'icons-active';
+
+        const currentCat = document.getElementById(`cat-${nowActive.id}`);
+        const pCat = document.getElementById(`cat-${active.id}`)
+        currentCat.style.display = 'block';
+        pCat.style.display = 'none';
+    
 }
 
 export { focusEffects };
