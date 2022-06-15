@@ -20,6 +20,10 @@ function deleteObject(index) {
     arr.splice(index, 1);
 }
 
+function addProjectAttribute(title, index) {
+    arr[index].project = title;
+}
 
 
-export { getData, deleteObject }
+
+export { getData, deleteObject, addProjectAttribute }

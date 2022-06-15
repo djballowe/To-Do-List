@@ -2,7 +2,15 @@ import { taskDOM } from "./addingtaskDOM"
 
 const build = taskDOM();
 
-function projectDom(index) {
+let projects = [];
+
+
+function getProjects() {
+    projects.push(document.getElementById('project-input').value);
+}
+
+function projectDom() {
+    let index = projects.length - 1;
     const container = document.querySelector('.project-select');
     const title = document.getElementById('project-input');
 
@@ -16,4 +24,4 @@ function projectDom(index) {
 
 }
 
-export { projectDom }
+export { projectDom, getProjects }

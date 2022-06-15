@@ -360,6 +360,18 @@ body {
     color: white;
 }
 
+.new-project-active {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+}
+
 .new-project:hover {
     background-color: #7c8e99fe;
 }

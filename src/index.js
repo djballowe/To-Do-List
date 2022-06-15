@@ -6,7 +6,7 @@ import { arr } from "./taskobjectfunctions"
 import { completed } from "./completed"
 import { important } from "./important"
 import { taskIconFunctions } from "./editanddeleteDOM"
-import { projectDom } from "./addingProjectDOM"
+import { projectDom, getProjects } from "./addingProjectDOM"
 
 
 const editDelete = taskIconFunctions();
@@ -41,7 +41,8 @@ document.querySelector('body').addEventListener('click', function(e) {
             task.cancel();
             break;
         case 'add-project':
-            projectDom(index);
+            getProjects();
+            projectDom();
         
     }
 
