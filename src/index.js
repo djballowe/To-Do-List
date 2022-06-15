@@ -32,7 +32,6 @@ document.querySelector('body').addEventListener('click', function(e) {
             getData();
             taskDOM();
             task.cancel();
-            console.log(arr);
             break;
         case 'project-add':
             task.project();
@@ -43,6 +42,8 @@ document.querySelector('body').addEventListener('click', function(e) {
         case 'add-project':
             getProjects();
             projectDom();
+            task.cancel();
+            break;
         
     }
 
