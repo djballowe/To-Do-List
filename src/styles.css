@@ -302,12 +302,15 @@ body {
     padding: 20px;
     border-radius: 10px;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.154);
 }
 
 .projects input {
     background-color: transparent;
     border: white 2px solid;
     padding: 10px;
+    color: white;
+    background-color: rgba(44, 44, 44, 0.202);
 }
 
 .projects-buttons {
@@ -342,6 +345,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-right: 30px;
 }
 
 .new-project {
