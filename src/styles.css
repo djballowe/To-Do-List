@@ -340,20 +340,27 @@ body {
 
 .project-select {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.new-project {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
     font-size: 25px;
-    padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    padding: 10px;
+    color: white;
 }
 
-.project-select:hover {
+.new-project:hover {
     background-color: #7c8e99fe;
 }
 
-#name {
+.name {
     display: flex;
     align-items: center;
 }
@@ -362,7 +369,12 @@ body {
     margin-left: 10px;
 }
 
-#trash {
+.trash {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
     display: flex;
     align-items: center;
 }
