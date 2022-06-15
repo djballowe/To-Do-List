@@ -25,10 +25,13 @@ function focusEffects(click) {
     active.class = 'icons';
     nowActive.class = 'icons-active';
 
-        const currentCat = document.getElementById(`cat-${nowActive.id}`);
-        const pCat = document.getElementById(`cat-${active.id}`)
-        currentCat.style.display = 'block';
-        pCat.style.display = 'none';
+    // switch the category visually along with the focus effect
+    
+    const currentCat = document.getElementById(`cat-${nowActive.id}`);
+    const pCat = document.getElementById(`cat-${active.id}`)
+    
+    currentCat.style.display = 'block';
+    pCat.style.display = 'none';
     
 }
 

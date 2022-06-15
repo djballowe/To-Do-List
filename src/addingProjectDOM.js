@@ -1,6 +1,6 @@
 import { taskDOM } from "./addingtaskDOM"
 
-const build = taskDOM();
+
 
 let projects = [];
 
@@ -10,6 +10,7 @@ function getProjects() {
 }
 
 function projectDom() {
+    const build = taskDOM();
     let index = projects.length - 1;
     const container = document.querySelector('.project-select');
     const title = document.getElementById('project-input');
@@ -21,6 +22,7 @@ function projectDom() {
     document.querySelector(`#name-${index}`).appendChild(build.elementFactory('p', 'none', `${title.value}`));
     document.querySelector(`#project-${index}`).appendChild(build.elementFactory('div', {id: `trash-${index}`, class: 'trash'}));
     document.querySelector(`#trash-${index}`).appendChild(build.elementFactory('img', {src: '../src/trash.svg', index: `${index}`}));
+
 
 }
 

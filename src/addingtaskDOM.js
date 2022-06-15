@@ -3,6 +3,8 @@ import { arr } from "./taskobjectfunctions"
 // adding tasks to the dom
 
 function taskDOM() {
+    let index = arr.length-1;
+    
     const elementFactory = (type, attributes, text) => {
         const create = document.createElement(type);
         create.textContent = text;
@@ -11,13 +13,8 @@ function taskDOM() {
                 create.setAttribute(key, attributes[key]);
             }
         }
-        
-        
         return create;
     }
-
-    for (let i = 0; i < arr.length; i++) {
-        let index = arr.length - 1;
 
         document.querySelector('.tasks').appendChild(elementFactory('div', {class: 'new-task', id: `task-${index}`, index: `${index}`}));
         document.querySelector(`#task-${index}`).appendChild(elementFactory('div', {class: 'left-side', id: `left-${index}`}));
@@ -41,9 +38,10 @@ function taskDOM() {
         info.appendChild(elementFactory('div', {class: 'trash', index: `${index}`, data: 'trash', id: `trash-${index}`}));
         document.querySelector(`#trash-${index}`).appendChild(elementFactory('img', {src: '../src/trash.svg', index: `${index}`, data: 'trash' }))
         
-        break;
-    }
+        
     return { elementFactory }
 }
+
+arr.forEach(taskDOM);
 
 export { taskDOM }
