@@ -1,11 +1,12 @@
 export let arr = JSON.parse(localStorage.getItem('tasks')) || [];
 
-function taskCreator(task, about, day) {
+function taskCreator(task, about, day, index) {
     return {
         title: task,
         description: about,
         date: day,
-        importance: false
+        importance: false,
+        index: index
     }
 }
 
@@ -17,7 +18,6 @@ function getData() {
     arr.push(taskCreator(title, description, date));
     
     localStorage.setItem('tasks', JSON.stringify(arr));
-    console.log(localStorage);
 }
 
 function deleteObject(index) {

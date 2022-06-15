@@ -3,7 +3,8 @@ import { arr } from "./taskobjectfunctions"
 // adding tasks to the dom
 
 function taskDOM() {
-    let index = arr.length-1;
+    
+    console.log(index);
     
     const elementFactory = (type, attributes, text) => {
         const create = document.createElement(type);

@@ -16,6 +16,10 @@ const task = addTaskProjects();
 
 // all button and event listeners
 
+function deleteStorage() {
+    localStorage.removeItem('tasks');
+}
+
 document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
@@ -43,6 +47,9 @@ document.querySelector('body').addEventListener('click', function(e) {
             getProjects();
             projectDom();
             task.cancel();
+            break;
+        case 'delete-local':
+            deleteStorage();
             break;
         
     }
