@@ -1,7 +1,7 @@
-import { local } from "./taskobjectfunctions"
+import { arr } from "./taskobjectfunctions"
 
 
-const arr = local();
+
 let doneTask = [];
 
 function completed() {

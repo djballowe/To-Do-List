@@ -2,12 +2,11 @@ import { addTaskProjects } from "./taskPopUp"
 import { focusEffects } from "./icons"
 import { deleteObject, getData, addToStorage } from "./taskobjectfunctions"
 import { taskDOM, clear } from "./addingtaskDOM"
-import { local } from "./taskobjectfunctions"
+import { arr } from "./taskobjectfunctions"
 import { completed } from "./completed"
 import { important } from "./important"
 import { taskIconFunctions } from "./editanddeleteDOM"
 import { projectDom, getProjects } from "./addingProjectDOM"
-
 
 const editDelete = taskIconFunctions();
 const priority = important();
@@ -38,7 +37,7 @@ document.querySelector('body').addEventListener('click', function(e) {
             task.cancel();
             clear();
             taskDOM();
-            addToStorage(local().length);
+            addToStorage(arr.length);
             break;
         case 'project-add':
             task.project();

@@ -1,12 +1,15 @@
-export const local = () => {
-    let arr;
+export let arr = JSON.parse(localStorage.getItem('tasks')) || [];
+
+
+const local = () => {
+    let thing;
+    let count;
     for (let i = 0; i < localStorage.length; i++) {
-        arr = JSON.parse(localStorage.getItem(`tasks${i}`)) || [];
+        thing = localStorage.getItem(`tasks${i}`);
     }
-    return arr;
+    console.log(thing);
+    console.log(count);
 }
-
-
 
 function taskCreator(task, about, day) {
     return {
@@ -22,17 +25,15 @@ function getData() {
     const description = document.getElementById('description').value;
     const date = document.getElementById('date').value;
     
-    local().push(taskCreator(title, description, date));
+    arr.push(taskCreator(title, description, date));
 }
 
 function addToStorage(index) {
-    localStorage.setItem(`tasks${index}`, JSON.stringify(local()));
-    console.log(localStorage);
-    console.log(index)
+    localStorage.setItem(`tasks${index}`, JSON.stringify(arr));
 }
 
 function deleteObject(index) {
-      
+    local();
 }
 
 function addProjectAttribute(title, index) {

@@ -1,7 +1,7 @@
-import { local } from "./taskobjectfunctions"
+import { arr } from "./taskobjectfunctions"
 
 
-const arr = local();
+
 // adding tasks to the dom
 const elementFactory = (type, attributes, text) => {
     const create = document.createElement(type);
@@ -27,7 +27,8 @@ const clear = () => {
 }
 
 function taskDOM() {
-    arr.forEach((item, index) =>  {
+    if (arr != undefined) {
+        arr.forEach((item, index) =>  {
             document.querySelector('.tasks').appendChild(elementFactory('div', {class: 'new-task', id: `task-${index}`, index: `${index}`}));
             document.querySelector(`#task-${index}`).appendChild(elementFactory('div', {class: 'left-side', id: `left-${index}`}));
             document.querySelector(`#task-${index}`).appendChild(elementFactory('div', {class: 'info', id: `info-${index}`}))
@@ -49,8 +50,8 @@ function taskDOM() {
             document.querySelector(`#edit-${index}`).appendChild(elementFactory('img', {src: '../src/pencil.svg', index: `${index}`, data: 'edit' }))
             info.appendChild(elementFactory('div', {class: 'trash', index: `${index}`, data: 'trash', id: `trash-${index}`}));
             document.querySelector(`#trash-${index}`).appendChild(elementFactory('img', {src: '../src/trash.svg', index: `${index}`, data: 'trash' }))
-
-    });
+            });
+    }
 }
 
 taskDOM();
