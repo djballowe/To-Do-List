@@ -1,8 +1,8 @@
 import { addTaskProjects } from "./taskPopUp"
 import { focusEffects } from "./icons"
-import { deleteObject, getData } from "./taskobjectfunctions"
+import { deleteObject, getData, addToStorage } from "./taskobjectfunctions"
 import { taskDOM, clear } from "./addingtaskDOM"
-import { arr } from "./taskobjectfunctions"
+import { local } from "./taskobjectfunctions"
 import { completed } from "./completed"
 import { important } from "./important"
 import { taskIconFunctions } from "./editanddeleteDOM"
@@ -18,15 +18,13 @@ const task = addTaskProjects();
 // all button and event listeners
 
 function deleteStorage() {
-    localStorage.removeItem('tasks');
+    localStorage.clear();
 }
 
 document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
-
-    console.log(data);
 
     switch (id) {
         case 'add-task':
@@ -36,10 +34,11 @@ document.querySelector('body').addEventListener('click', function(e) {
             task.cancel();
             break;
         case 'add':
-            getData(index);
+            getData();
             task.cancel();
             clear();
             taskDOM();
+            addToStorage(local().length);
             break;
         case 'project-add':
             task.project();

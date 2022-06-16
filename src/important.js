@@ -1,4 +1,6 @@
-import { arr } from "./taskobjectfunctions"
+import { local } from "./taskobjectfunctions"
+
+const arr = local();
 
 function important() {
     const starDom = (index, data) => {
@@ -20,7 +22,7 @@ function important() {
 
     const changePrio = (index, data) => {
         if (data === 'not-important') {
-            arr[index].importance = true;
+            arr.arr[index].importance = true;
             console.log('should be true')
         } else if (data === 'important') {
             arr[index].importance = false;

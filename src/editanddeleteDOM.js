@@ -1,6 +1,8 @@
 import { addTaskProjects } from "./taskPopUp"
-import { arr, deleteObject } from "./taskobjectfunctions"
+import { local, deleteObject } from "./taskobjectfunctions"
 
+
+const arr = local();
 const taskPop = addTaskProjects();
 
 function taskIconFunctions() {

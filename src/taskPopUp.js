@@ -16,11 +16,6 @@ const addTaskProjects = () => {
         const description = document.getElementById('description');
         const date = document.getElementById('date');
         const project = document.getElementById('project-input');
-        
-        console.log(title);
-        console.log(description);
-        console.log(date);
-        console.log(project);
 
         form.style.display = 'none';
         projectForm.style.display = 'none';

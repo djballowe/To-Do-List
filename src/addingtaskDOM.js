@@ -1,5 +1,7 @@
-import { arr } from "./taskobjectfunctions"
+import { local } from "./taskobjectfunctions"
 
+
+const arr = local();
 // adding tasks to the dom
 const elementFactory = (type, attributes, text) => {
     const create = document.createElement(type);
