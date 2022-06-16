@@ -77,6 +77,9 @@ document.querySelector('body').addEventListener('click', function(e) {
         case 'print-done':
             printCompleted();
             break;
+        case 'print-date':
+            date();
+            break;
         
     }
 

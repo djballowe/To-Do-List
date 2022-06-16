@@ -1,4 +1,4 @@
-import { format, compareAsc } from 'date-fns'
+import { format, compareAsc, addDays } from 'date-fns'
 import { formatDistance, subDays } from 'date-fns'
 import { taskDOM } from './addingtaskDOM';
 import { arr } from "./taskobjectfunctions"
@@ -20,6 +20,10 @@ let iconClass = [{
 }];
 
 function catagories() {
+    
+    const currentDate = format(new Date(), 'yyyy-MM-dd');
+    console.log(currentDate);
+    
     const all = () => {
         for (let i = 0; i < arr.length; i++) {
             document.getElementById(`task-${i}`).style.display = 'flex';
@@ -30,12 +34,26 @@ function catagories() {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i].importance === false) {
                 document.getElementById(`task-${i}`).style.display = 'none';
+            } else if (arr[i].importance === true) {
+                document.getElementById(`task-${i}`).style.display = 'flex';
             }
         }
     }
+
+    const today = () => {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].date !== currentDate) {
+                document.getElementById(`task-${i}`).style.display = 'none';
+            } else if (arr[i].date === currentDate) {
+                document.getElementById(`task-${i}`).style.display = 'flex';
+            }
+        }
+    }
+
     return {
         all,
-        stared
+        stared,
+        today
     }
 }
 
@@ -64,6 +82,8 @@ function focusEffects(click) {
         cat.stared();
     } else if (nowActive.id === 'all') {
         cat.all();
+    } else if (nowActive.id === 'today') {
+        cat.today();
     }
     
 }
