@@ -84,11 +84,9 @@ document.querySelector('body').addEventListener('click', function(e) {
             check.uncompletedArray(index);
             break;
         case 'not-important':
-            priority.starDom(index, data);
             priority.changePrio(index, data);
             break;
         case 'important':
-            priority.starDom(index, data);
             priority.changePrio(index, data);
             break;
         case 'trash':
@@ -102,5 +100,5 @@ document.querySelector('body').addEventListener('click', function(e) {
     }
 })
 
-
+priority.checkPrio();
 
