@@ -1,4 +1,4 @@
-import { arr } from "./taskobjectfunctions"
+import { addToStorage, arr } from "./taskobjectfunctions"
 
 function important() {
     const starDom = (index, data) => {
@@ -20,13 +20,14 @@ function important() {
 
     const changePrio = (index, data) => {
         if (data === 'not-important') {
+            localStorage.clear();
             arr[index].importance = true;
-            console.log('should be true')
+            addToStorage();
         } else if (data === 'important') {
+            localStorage.clear();
             arr[index].importance = false;
-            console.log('should be false')
+            addToStorage();
         }
-        console.log(arr);
     }
 
     return {

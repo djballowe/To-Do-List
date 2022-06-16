@@ -33,7 +33,6 @@ document.querySelector('body').addEventListener('click', function(e) {
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
 
-    console.log(index);
 
     switch (id) {
         case 'add-task':
