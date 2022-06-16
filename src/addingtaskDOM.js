@@ -51,4 +51,6 @@ function taskDOM() {
     });
 }
 
+taskDOM();
+
 export { taskDOM, clear, elementFactory }

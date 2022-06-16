@@ -1,6 +1,6 @@
 import { addTaskProjects } from "./taskPopUp"
 import { focusEffects } from "./icons"
-import { getData } from "./taskobjectfunctions"
+import { deleteObject, getData } from "./taskobjectfunctions"
 import { taskDOM, clear } from "./addingtaskDOM"
 import { arr } from "./taskobjectfunctions"
 import { completed } from "./completed"
@@ -26,6 +26,8 @@ document.querySelector('body').addEventListener('click', function(e) {
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
 
+    console.log(data);
+
     switch (id) {
         case 'add-task':
             task.task();
@@ -34,7 +36,7 @@ document.querySelector('body').addEventListener('click', function(e) {
             task.cancel();
             break;
         case 'add':
-            getData();
+            getData(index);
             clear();
             taskDOM();
             task.cancel();
@@ -78,8 +80,11 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
         case 'trash':
             editDelete.trash(index);
+            deleteObject(index);
+            break;
         case 'edit':
             editDelete.edit(index);
+            break;
 
     }
 })
