@@ -37,9 +37,9 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
         case 'add':
             getData(index);
+            task.cancel();
             clear();
             taskDOM();
-            task.cancel();
             break;
         case 'project-add':
             task.project();

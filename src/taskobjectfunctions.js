@@ -23,7 +23,6 @@ function getData(index) {
 
 function deleteObject(index) {
     arr.splice(index, 1);
-    
 }
 
 function addProjectAttribute(title, index) {
