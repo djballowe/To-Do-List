@@ -26,12 +26,12 @@ function taskIconFunctions() {
         const date = document.getElementById('date');
         
         trash(index);
-        deleteObject(index);
         
         title.value = `${arr[index].title}`
         description.value = `${arr[index].description}`
         date.value = `${arr[index].date}`
         taskPop.task();
+        deleteObject(index);
 
     }
     

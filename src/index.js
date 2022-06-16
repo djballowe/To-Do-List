@@ -24,10 +24,16 @@ function print() {
     console.log(localStorage)
 }
 
+function printArray() {
+    console.log(arr);
+}
+
 document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
+
+    console.log(index);
 
     switch (id) {
         case 'add-task':
@@ -59,6 +65,9 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
         case 'print-local':
             print();
+            break;
+        case 'print-array':
+            printArray();
             break;
         
     }
