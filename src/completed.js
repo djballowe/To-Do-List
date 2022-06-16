@@ -1,8 +1,8 @@
 import { arr } from "./taskobjectfunctions"
+import { addToStorage } from "./taskobjectfunctions"
 
 
-
-let doneTask = [];
+export let doneTask = [];
 
 function completed() {
     const changeCheck = (id, index) => {
@@ -19,22 +19,21 @@ function completed() {
             theTask.classList.add('completed-task');
             button.removeAttribute('data');
             button.setAttribute('data', 'completed');
-            
         }   
     }
 
     const completedArray = (index) => {
         doneTask.push(arr[index]);
         arr.splice(index, 1);
-        console.log(arr);
-        console.log(doneTask);
+        localStorage.clear();
+        addToStorage();
     }
 
     const uncompletedArray = (index) => {
         arr.push(doneTask[index]);
         doneTask.splice(index, 1);
-        console.log(arr);
-        console.log(doneTask);
+        localStorage.clear();
+        addToStorage();
     }
 
     return {
