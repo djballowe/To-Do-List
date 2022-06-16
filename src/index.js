@@ -20,6 +20,10 @@ function deleteStorage() {
     localStorage.clear();
 }
 
+function print() {
+    console.log(localStorage)
+}
+
 document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
@@ -52,6 +56,9 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
         case 'delete-local':
             deleteStorage();
+            break;
+        case 'print-local':
+            print();
             break;
         
     }
