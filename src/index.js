@@ -37,7 +37,7 @@ document.querySelector('body').addEventListener('click', function(e) {
             task.cancel();
             clear();
             taskDOM();
-            addToStorage(arr.length);
+            addToStorage();
             break;
         case 'project-add':
             task.project();

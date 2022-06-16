@@ -27,7 +27,7 @@ const clear = () => {
 }
 
 function taskDOM() {
-    if (arr != undefined) {
+    
         arr.forEach((item, index) =>  {
             document.querySelector('.tasks').appendChild(elementFactory('div', {class: 'new-task', id: `task-${index}`, index: `${index}`}));
             document.querySelector(`#task-${index}`).appendChild(elementFactory('div', {class: 'left-side', id: `left-${index}`}));
@@ -51,7 +51,7 @@ function taskDOM() {
             info.appendChild(elementFactory('div', {class: 'trash', index: `${index}`, data: 'trash', id: `trash-${index}`}));
             document.querySelector(`#trash-${index}`).appendChild(elementFactory('img', {src: '../src/trash.svg', index: `${index}`, data: 'trash' }))
             });
-    }
+    
 }
 
 taskDOM();
