@@ -1,3 +1,8 @@
+import { format, compareAsc } from 'date-fns'
+import { formatDistance, subDays } from 'date-fns'
+import { taskDOM } from './addingtaskDOM';
+import { arr } from "./taskobjectfunctions"
+
 // switching the active highlights
 
 let iconClass = [{
@@ -14,6 +19,28 @@ let iconClass = [{
     class: 'icons'
 }];
 
+function catagories() {
+    const all = () => {
+        for (let i = 0; i < arr.length; i++) {
+            document.getElementById(`task-${i}`).style.display = 'flex';
+        }
+    }
+
+    const stared = () => {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].importance === false) {
+                document.getElementById(`task-${i}`).style.display = 'none';
+            }
+        }
+    }
+    return {
+        all,
+        stared
+    }
+}
+
+const cat = catagories();
+
 function focusEffects(click) {
     const icon = document.getElementById(click);
     const active = iconClass.find(e => e.class === 'icons-active');
@@ -28,11 +55,17 @@ function focusEffects(click) {
     // switch the category visually along with the focus effect
     
     const currentCat = document.getElementById(`cat-${nowActive.id}`);
-    const pCat = document.getElementById(`cat-${active.id}`)
+    const pCat = document.getElementById(`cat-${active.id}`);
     
     currentCat.style.display = 'block';
     pCat.style.display = 'none';
+
+    if (nowActive.id === 'important') {
+        cat.stared();
+    } else if (nowActive.id === 'all') {
+        cat.all();
+    }
     
 }
 
-export { focusEffects };
+export { focusEffects, catagories };

@@ -1,5 +1,5 @@
 import { addTaskProjects } from "./taskPopUp"
-import { focusEffects } from "./icons"
+import { focusEffects, catagories } from "./icons"
 import { deleteObject, getData, addToStorage } from "./taskobjectfunctions"
 import { taskDOM, clear } from "./addingtaskDOM"
 import { arr } from "./taskobjectfunctions"
@@ -13,6 +13,7 @@ const editDelete = taskIconFunctions();
 const priority = important();
 const check = completed();
 const task = addTaskProjects();
+const cat = catagories();
 
 
 // all button and event listeners
@@ -37,7 +38,7 @@ document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
-
+    
 
     switch (id) {
         case 'add-task':
