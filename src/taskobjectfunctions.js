@@ -6,7 +6,6 @@ function taskCreator(task, about, day, index) {
         description: about,
         date: day,
         importance: false,
-        index: index
     }
 }
 
@@ -18,6 +17,8 @@ function getData() {
     arr.push(taskCreator(title, description, date));
     
     localStorage.setItem('tasks', JSON.stringify(arr));
+
+    console.log(arr);
 }
 
 function deleteObject(index) {

@@ -1,7 +1,7 @@
 import { addTaskProjects } from "./taskPopUp"
 import { focusEffects } from "./icons"
 import { getData } from "./taskobjectfunctions"
-import { taskDOM } from "./addingtaskDOM"
+import { taskDOM, clear } from "./addingtaskDOM"
 import { arr } from "./taskobjectfunctions"
 import { completed } from "./completed"
 import { important } from "./important"
@@ -13,6 +13,7 @@ const editDelete = taskIconFunctions();
 const priority = important();
 const check = completed();
 const task = addTaskProjects();
+
 
 // all button and event listeners
 
@@ -34,6 +35,7 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
         case 'add':
             getData();
+            clear();
             taskDOM();
             task.cancel();
             break;
