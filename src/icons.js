@@ -1,11 +1,11 @@
 import { format, isWithinInterval } from 'date-fns'
-import { formatDistance, subDays, add } from 'date-fns'
+import { add } from 'date-fns'
 import { arr } from "./taskobjectfunctions"
 import { projects } from "./addingProjectDOM"
 
 // switching the active highlights
 
-export let iconClass = [{
+export let iconClass = JSON.parse(localStorage.getItem('categories')) + [{
     id: 'all',
     class: 'icons-active'
 }, {
@@ -110,13 +110,7 @@ function focusEffects(click) {
         cat.today();
     } else if (nowActive.id === 'upcoming') {
         cat.upcoming();
-    }
-
-    // switch the category visually to the custom projects
-
-
-
-    
+    }    
 }
 
 export { focusEffects, catagories };
