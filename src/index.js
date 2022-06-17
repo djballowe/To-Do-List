@@ -6,7 +6,7 @@ import { arr } from "./taskobjectfunctions"
 import { completed } from "./completed"
 import { important } from "./important"
 import { taskIconFunctions } from "./editanddeleteDOM"
-import { projectDom, getProjects } from "./addingProjectDOM"
+import { projectDom, getProjects, addProjectToStorage } from "./addingProjectDOM"
 import { doneTask } from "./completed"
 import { projects } from "./addingProjectDOM"
 
@@ -68,6 +68,7 @@ document.querySelector('body').addEventListener('click', function(e) {
         case 'add-project':
             getProjects();
             projectDom();
+            addProjectToStorage();
             task.cancel();
             break;
         case 'delete-local':
