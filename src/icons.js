@@ -1,11 +1,11 @@
-import { format, compareAsc, addDays, formatDistanceToNow, isWithinInterval } from 'date-fns'
+import { format, isWithinInterval } from 'date-fns'
 import { formatDistance, subDays, add } from 'date-fns'
-import { taskDOM } from './addingtaskDOM';
 import { arr } from "./taskobjectfunctions"
+import { projects } from "./addingProjectDOM"
 
 // switching the active highlights
 
-let iconClass = [{
+export let iconClass = [{
     id: 'all',
     class: 'icons-active'
 }, {
@@ -20,7 +20,6 @@ let iconClass = [{
 }];
 
 function catagories() {
-    
     
     const currentDate = format(new Date(), 'yyyy-MM-dd');
     const tomorrow = add((new Date()), {
@@ -113,7 +112,10 @@ function focusEffects(click) {
         cat.upcoming();
     }
 
-    
+    // switch the category visually to the custom projects
+
+
+
     
 }
 

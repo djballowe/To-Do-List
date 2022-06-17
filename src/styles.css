@@ -379,6 +379,7 @@ body {
 .name {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .project-select p {
