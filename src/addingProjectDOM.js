@@ -18,6 +18,7 @@ function getProjects() {
     iconClass.push(
         catCreator(`${document.getElementById('project-input').value}`)
     )
+    return { catCreator }
 }
 
 function addProjectToStorage() {

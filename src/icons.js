@@ -5,7 +5,7 @@ import { projects } from "./addingProjectDOM"
 
 // switching the active highlights
 
-export let iconClass = JSON.parse(localStorage.getItem('categories')) + [{
+export let iconClass = [{
     id: 'all',
     class: 'icons-active'
 }, {
