@@ -31,14 +31,6 @@ function catagories() {
         weeks: 1
     })
 
-    const weekLaterFormat = format(weekLater, 'yyy-MM-dd');
-
-   
-
-    
-
-
-
     const all = () => {
         for (let i = 0; i < arr.length; i++) {
             document.getElementById(`task-${i}`).style.display = 'flex';
@@ -70,7 +62,6 @@ function catagories() {
             let year = parseInt(arr[i].date);
             let month = parseInt(arr[i].date[5] + arr[i].date[6]) - 1;
             let day = parseInt(arr[i].date[8] + arr[i].date[9]);
-            console.log({year, month, day})
             
             if (isWithinInterval(new Date(year, month, day), {
                 start: tomorrow,
@@ -121,6 +112,8 @@ function focusEffects(click) {
     } else if (nowActive.id === 'upcoming') {
         cat.upcoming();
     }
+
+    
     
 }
 

@@ -8,6 +8,7 @@ import { important } from "./important"
 import { taskIconFunctions } from "./editanddeleteDOM"
 import { projectDom, getProjects } from "./addingProjectDOM"
 import { doneTask } from "./completed"
+import { projects } from "./addingProjectDOM"
 
 const editDelete = taskIconFunctions();
 const priority = important();
@@ -32,6 +33,10 @@ function printArray() {
 
 function printCompleted() {
     console.log(doneTask);
+}
+
+function printProject() {
+    console.log(projects);
 }
 
 document.querySelector('body').addEventListener('click', function(e) {
@@ -76,6 +81,9 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
         case 'print-done':
             printCompleted();
+            break;
+        case 'print-projects':
+            printProject();
             break;
         
     }

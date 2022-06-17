@@ -26,7 +26,6 @@ function deleteObject(index) {
     arr.splice(index, 1);
     localStorage.clear();
     addToStorage();
-    
 }
 
 function addProjectAttribute(title, index) {
