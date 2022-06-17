@@ -1,5 +1,5 @@
-import { format, compareAsc, addDays } from 'date-fns'
-import { formatDistance, subDays } from 'date-fns'
+import { format, compareAsc, addDays, formatDistanceToNow, isWithinInterval } from 'date-fns'
+import { formatDistance, subDays, add } from 'date-fns'
 import { taskDOM } from './addingtaskDOM';
 import { arr } from "./taskobjectfunctions"
 
@@ -21,8 +21,19 @@ let iconClass = [{
 
 function catagories() {
     
+    const curDate = new Date();
     const currentDate = format(new Date(), 'yyyy-MM-dd');
-    console.log(currentDate);
+    const weekLater = add((curDate), {
+        weeks: 1
+    })
+
+    console.log(isWithinInterval(new Date(arr[i].date, {
+        start: currentDate,
+        end: weekLaterFormat
+    })))
+
+    const weekLaterFormat = format(weekLater, 'yyy-MM-dd');
+
     
     const all = () => {
         for (let i = 0; i < arr.length; i++) {
@@ -50,10 +61,24 @@ function catagories() {
         }
     }
 
+    const upcoming = () => {
+        for (let i = 0; i < arr.length; i++) {
+            if (isWithinInterval(new Date(arr[i].date, {
+                start: currentDate,
+                end: weekLaterFormat
+            })) === true) {
+                document.getElementById(`task-${i}`).style.display = 'flex';
+            } else {
+                document.getElementById(`task-${i}`).style.display = 'none';
+            }
+        }
+    }
+
     return {
         all,
         stared,
-        today
+        today,
+        upcoming
     }
 }
 
@@ -84,6 +109,8 @@ function focusEffects(click) {
         cat.all();
     } else if (nowActive.id === 'today') {
         cat.today();
+    } else if (nowActive.id === 'upcoming') {
+        cat.upcoming();
     }
     
 }
