@@ -21,20 +21,24 @@ let iconClass = [{
 
 function catagories() {
     
-    const curDate = new Date();
+    
     const currentDate = format(new Date(), 'yyyy-MM-dd');
-    const weekLater = add((curDate), {
+    const tomorrow = add((new Date()), {
+        days: 1
+    })
+
+    const weekLater = add((new Date()), {
         weeks: 1
     })
 
-    console.log(isWithinInterval(new Date(arr[i].date, {
-        start: currentDate,
-        end: weekLaterFormat
-    })))
-
     const weekLaterFormat = format(weekLater, 'yyy-MM-dd');
 
+   
+
     
+
+
+
     const all = () => {
         for (let i = 0; i < arr.length; i++) {
             document.getElementById(`task-${i}`).style.display = 'flex';
@@ -63,10 +67,15 @@ function catagories() {
 
     const upcoming = () => {
         for (let i = 0; i < arr.length; i++) {
-            if (isWithinInterval(new Date(arr[i].date, {
-                start: currentDate,
-                end: weekLaterFormat
-            })) === true) {
+            let year = parseInt(arr[i].date);
+            let month = parseInt(arr[i].date[5] + arr[i].date[6]) - 1;
+            let day = parseInt(arr[i].date[8] + arr[i].date[9]);
+            console.log({year, month, day})
+            
+            if (isWithinInterval(new Date(year, month, day), {
+                start: tomorrow,
+                end: weekLater
+            }) === true) {
                 document.getElementById(`task-${i}`).style.display = 'flex';
             } else {
                 document.getElementById(`task-${i}`).style.display = 'none';
