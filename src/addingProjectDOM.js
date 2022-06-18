@@ -1,5 +1,5 @@
 import { elementFactory } from "./addingtaskDOM"
-import { storageArray, iconClass } from "./icons"
+import { iconClass } from "./icons"
 
 
 
@@ -61,7 +61,7 @@ function projectDom() {
 
         // make a new category title
 
-        newCatContainer.appendChild(elementFactory('h2', {id: `cat-project-${projects[index]}`}, `${text}`));
+        newCatContainer.appendChild(elementFactory('h2', {id: `cat-project-${projects[index]}`, input: 'dynamic-project', index: `${index}`}, `${text}`));
         document.getElementById(`cat-project-${projects[index]}`).style.display = 'none';
     })
 }

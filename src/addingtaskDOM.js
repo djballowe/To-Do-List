@@ -1,6 +1,6 @@
-import { arr } from "./taskobjectfunctions"
 
 
+let arr = JSON.parse(localStorage.getItem('tasks')) || [];
 
 // adding tasks to the dom
 const elementFactory = (type, attributes, text) => {
@@ -51,7 +51,6 @@ function taskDOM() {
         info.appendChild(elementFactory('div', {class: 'trash', index: `${index}`, data: 'trash', id: `trash-${index}`}));
         document.querySelector(`#trash-${index}`).appendChild(elementFactory('img', {src: '../src/trash.svg', index: `${index}`, data: 'trash' }))
     });
-    
 }
 
 taskDOM();
