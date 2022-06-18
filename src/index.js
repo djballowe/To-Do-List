@@ -1,5 +1,5 @@
 import { addTaskProjects } from "./taskPopUp"
-import { focusEffects, catagories, iconClass } from "./icons"
+import { focusEffects, catagories, storageArray } from "./icons"
 import { deleteObject, getData, addToStorage } from "./taskobjectfunctions"
 import { taskDOM, clear } from "./addingtaskDOM"
 import { arr } from "./taskobjectfunctions"
@@ -37,7 +37,6 @@ function printCompleted() {
 
 function printProject() {
     console.log(projects);
-    console.log(iconClass);
 }
 
 document.querySelector('body').addEventListener('click', function(e) {

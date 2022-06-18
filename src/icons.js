@@ -2,6 +2,7 @@ import { format, isWithinInterval } from 'date-fns'
 import { add } from 'date-fns'
 import { arr } from "./taskobjectfunctions"
 import { projects } from "./addingProjectDOM"
+import { addProjectToStorage } from './addingProjectDOM'
 
 // switching the active highlights
 
@@ -84,9 +85,11 @@ function catagories() {
 const cat = catagories();
 
 function focusEffects(click) {
+    
+    const storage = addProjectToStorage();
     const icon = document.getElementById(click);
-    const active = iconClass.find(e => e.class === 'icons-active');
-    const nowActive = iconClass.find(e => e.id === `${click}`);
+    const active = storage.find(e => e.class === 'icons-active');
+    const nowActive = storage.find(e => e.id === `${click}`);
     const highlight = document.getElementById(`${active.id}`);
     
     icon.classList.add('icons-active');
