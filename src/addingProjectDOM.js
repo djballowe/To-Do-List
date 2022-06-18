@@ -54,10 +54,10 @@ function projectDom() {
         container.appendChild(elementFactory('div', {class: 'new-project', id: `project-${projects[index]}`, data: 'organize'}));
         document.querySelector(`#project-${projects[index]}`).appendChild(elementFactory('div', {id: `name-${index}`, class: 'name'}));
         document.querySelector(`#name-${index}`).appendChild(elementFactory('div', {id: `grid-${index}`, index: `${index}`, class: 'grid'}));
-        document.querySelector(`#grid-${index}`).appendChild(elementFactory('img', {src: '../src/grid.svg', index: `${index}`}));
+        document.querySelector(`#grid-${index}`).appendChild(elementFactory('img', {class: 'white-png', src: '../src/grid-white.png', index: `${index}`}));
         document.querySelector(`#name-${index}`).appendChild(elementFactory('p', 'none', `${text}`));
         document.querySelector(`#project-${projects[index]}`).appendChild(elementFactory('div', {id: `trash-${index}`, class: 'trash'}));
-        document.querySelector(`#trash-${index}`).appendChild(elementFactory('img', {src: '../src/trash.svg', index: `${index}`}));
+        document.querySelector(`#trash-${index}`).appendChild(elementFactory('img', {class: 'white-png', src: '../src/trash-white.png', index: `${index}`}));
 
         // make a new category title
 

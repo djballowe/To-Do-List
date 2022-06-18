@@ -377,6 +377,11 @@ body {
     background-color: #7c8e99fe;
 }
 
+.white-png {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .name {
     display: flex;
     align-items: center;
