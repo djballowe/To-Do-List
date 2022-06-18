@@ -154,7 +154,7 @@ body {
     border-bottom: #385f6f 3px solid;
 }
 
-.all button {
+#add-task {
     background-color: #385f6f;
     border-radius: 17px;
     border: none;
@@ -164,6 +164,7 @@ body {
     font-size: 1rem;
     margin-bottom: 10px;
     cursor: pointer;
+    order: 300;
 }
 
 .all h2 {
