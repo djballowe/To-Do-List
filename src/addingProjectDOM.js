@@ -1,5 +1,5 @@
 import { elementFactory } from "./addingtaskDOM"
-import { iconClass } from "./icons"
+import { storageArray, iconClass } from "./icons"
 
 
 
@@ -24,8 +24,6 @@ function getProjects() {
 function addProjectToStorage() {
     localStorage.setItem('projects', JSON.stringify(projects));
     localStorage.setItem('categories', JSON.stringify(iconClass));
-    let storageArray = JSON.parse(localStorage.getItem('categories'));
-    return storageArray;
 }
 
 function projectDom() {

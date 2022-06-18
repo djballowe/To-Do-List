@@ -6,7 +6,7 @@ import { addProjectToStorage } from './addingProjectDOM'
 
 // switching the active highlights
 
-export let iconClass = [{
+export let iconClass = JSON.parse(localStorage.getItem('categories')) || [{
     id: 'all',
     class: 'icons-active'
 }, {
@@ -85,11 +85,10 @@ function catagories() {
 const cat = catagories();
 
 function focusEffects(click) {
-    
-    const storage = addProjectToStorage();
+    console.log(iconClass);
     const icon = document.getElementById(click);
-    const active = storage.find(e => e.class === 'icons-active');
-    const nowActive = storage.find(e => e.id === `${click}`);
+    const active = iconClass.find(e => e.class === 'icons-active');
+    const nowActive = iconClass.find(e => e.id === `${click}`);
     const highlight = document.getElementById(`${active.id}`);
     
     icon.classList.add('icons-active');
