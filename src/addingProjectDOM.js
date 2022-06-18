@@ -32,6 +32,18 @@ function addProjectToStorage() {
     localStorage.setItem('categories', JSON.stringify(iconClass));
 }
 
+function clearProjectDom() {
+    const container = document.querySelector('.project-select');
+    const num = document.getElementById('project-select').childElementCount;
+    for (let i = 0; i < num; i++) {
+        let child = container.lastElementChild;
+        while (child) {
+            container.removeChild(child);
+            child = container.lastElementChild;
+        }
+    }
+}
+
 function projectDom() {
     const container = document.querySelector('.project-select');
     const newCatContainer = document.querySelector('.all');
@@ -56,4 +68,4 @@ function projectDom() {
 
 projectDom();
 
-export { projectDom, getProjects, addProjectToStorage }
+export { projectDom, getProjects, addProjectToStorage, clearProjectDom }
