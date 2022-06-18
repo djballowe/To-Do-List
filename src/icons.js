@@ -7,16 +7,16 @@ import { addProjectToStorage } from './addingProjectDOM'
 // switching the active highlights
 
 export let iconClass = JSON.parse(localStorage.getItem('categories')) || [{
-    id: 'all',
+    id: 'project-all',
     class: 'icons-active'
 }, {
-    id: 'important',
+    id: 'project-important',
     class: 'icons'
 }, {
-    id: 'today',
+    id: 'project-today',
     class: 'icons'
 }, {
-    id: 'upcoming',
+    id: 'project-upcoming',
     class: 'icons'
 }];
 

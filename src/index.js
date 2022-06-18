@@ -43,6 +43,7 @@ document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
+    const input = e.target.getAttribute('input');
     
 
     switch (id) {
@@ -91,7 +92,7 @@ document.querySelector('body').addEventListener('click', function(e) {
 
     switch (data) {
         case 'organize':
-            focusEffects(id);
+            focusEffects(id, input);
             break;
         case 'non-completed':
             check.changeCheck(id, index);
