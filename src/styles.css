@@ -407,19 +407,19 @@ body {
 
 /* page switching by category */
 
-#cat-all {
+#cat-project-all {
     display: block;
 }
 
-#cat-important {
+#cat-project-important {
     display: none;
 }
 
-#cat-upcoming {
+#cat-project-upcoming {
     display: none;
 }
 
-#cat-today {
+#cat-project-today {
     display: none;
 }
 
