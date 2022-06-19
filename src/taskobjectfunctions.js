@@ -19,11 +19,13 @@ function getData() {
     const num = document.getElementById('project-select').childElementCount;
 
     if (num > 0) {
-        const projectCheck = document.getElementById(`cat-project-${projects[index]}`);
-        if (projectCheck.style.display === 'block') {
-            arr.push(taskCreator(title, description, date, projects[index]));
-        } else {
-            arr.push(taskCreator(title, description, date));
+        for (let i = 0; i < projects.length; i++) {
+            const projectCheck = document.getElementById(`cat-project-${projects[i]}`);
+            if (projectCheck.style.display === 'block') {
+                arr.push(taskCreator(title, description, date, projects[i]));
+            } else {
+                arr.push(taskCreator(title, description, date));
+            }
         }
     } else {
         arr.push(taskCreator(title, description, date));
