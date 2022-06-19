@@ -1,5 +1,6 @@
 import { arr } from "./addingtaskDOM"
 import { addToStorage } from "./taskobjectfunctions"
+import { addProjectToStorage } from "./addingProjectDOM";
 
 
 export let doneTask = [];
@@ -27,6 +28,7 @@ function completed() {
         arr.splice(index, 1);
         localStorage.clear();
         addToStorage();
+        addProjectToStorage();
     }
 
     const uncompletedArray = (index) => {
@@ -34,6 +36,7 @@ function completed() {
         doneTask.splice(index, 1);
         localStorage.clear();
         addToStorage();
+        addProjectToStorage();
     }
 
     return {

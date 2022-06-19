@@ -111,6 +111,8 @@ function focusEffects(click, index) {
     
     const currentCat = document.getElementById(`cat-${nowActive.id}`);
     const pCat = document.getElementById(`cat-${active.id}`);
+
+    console.log(currentCat);
     
     currentCat.style.display = 'block';
     pCat.style.display = 'none';
