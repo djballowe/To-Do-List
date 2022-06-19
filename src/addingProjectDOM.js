@@ -45,6 +45,18 @@ function clearProjectDom() {
     }
 }
 
+function clearCatDom() {
+    const container = document.querySelector('.new-cats');
+    const num = document.getElementById('new-cats').childElementCount;
+    for (let i = 0; i < num; i++) {
+        let child = container.lastElementChild;
+        while (child) {
+            container.removeChild(child);
+            child = container.lastElementChild;
+        }
+    }
+}
+
 function deleteProjectDom(index, id) {
     const parent = document.getElementById(id).parentElement;
     const parentid = document.getElementById(id).parentElement.id;
@@ -79,7 +91,7 @@ function deleteProjectDom(index, id) {
 
 function projectDom() {
     const container = document.querySelector('.project-select');
-    const newCatContainer = document.querySelector('.all');
+    const newCatContainer = document.querySelector('.new-cats');
     
 
     projects.forEach((item, index) => {
@@ -101,4 +113,4 @@ function projectDom() {
 
 projectDom();
 
-export { projectDom, getProjects, addProjectToStorage, clearProjectDom, deleteProjectDom }
+export { projectDom, getProjects, addProjectToStorage, clearProjectDom, deleteProjectDom, clearCatDom }

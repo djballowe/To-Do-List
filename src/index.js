@@ -6,7 +6,7 @@ import { arr } from "./addingtaskDOM"
 import { completed } from "./completed"
 import { important } from "./important"
 import { taskIconFunctions } from "./editanddeleteDOM"
-import { projectDom, getProjects, addProjectToStorage, clearProjectDom, deleteProjectDom } from "./addingProjectDOM"
+import { projectDom, getProjects, addProjectToStorage, clearProjectDom, deleteProjectDom, clearCatDom } from "./addingProjectDOM"
 import { doneTask } from "./completed"
 import { projects } from "./addingProjectDOM"
 
@@ -71,6 +71,7 @@ document.querySelector('body').addEventListener('click', function(e) {
         case 'add-project':
             getProjects();
             task.cancel();
+            clearCatDom();
             clearProjectDom();
             projectDom();
             addProjectToStorage();
