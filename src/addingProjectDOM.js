@@ -56,8 +56,8 @@ function projectDom() {
         document.querySelector(`#name-${index}`).appendChild(elementFactory('div', {id: `grid-${index}`, index: `${index}`, class: 'grid'}));
         document.querySelector(`#grid-${index}`).appendChild(elementFactory('img', {class: 'white-png', src: '../src/grid-white.png', index: `${index}`}));
         document.querySelector(`#name-${index}`).appendChild(elementFactory('p', 'none', `${text}`));
-        document.querySelector(`#project-${projects[index]}`).appendChild(elementFactory('div', {id: `trash-${index}`, class: 'trash'}));
-        document.querySelector(`#trash-${index}`).appendChild(elementFactory('img', {class: 'white-png', src: '../src/trash-white.png', index: `${index}`}));
+        document.querySelector(`#project-${projects[index]}`).appendChild(elementFactory('div', {id: `project-trash-${index}`, class: 'trash'}));
+        document.querySelector(`#project-trash-${index}`).appendChild(elementFactory('img', {class: 'white-png', src: '../src/trash-white.png', index: `${index}`}));
 
         // make a new category title
 
