@@ -1,6 +1,7 @@
 import { projects } from "./addingProjectDOM";
+import { arr } from "./addingtaskDOM";
 
-export let arr = JSON.parse(localStorage.getItem('tasks')) || [];
+
 
 function taskCreator(task, about, day, project) {
     return {
@@ -42,11 +43,6 @@ function deleteObject(index) {
     addToStorage();
 }
 
-function addProjectAttribute(title, index) {
-    
-    arr[index].project = title;
-}
 
 
-
-export { getData, deleteObject, addProjectAttribute, addToStorage }
+export { getData, deleteObject, addToStorage }

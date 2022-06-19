@@ -1,6 +1,6 @@
 import { format, isWithinInterval } from 'date-fns'
 import { add } from 'date-fns'
-import { arr } from "./taskobjectfunctions"
+import { arr } from "./addingtaskDOM"
 import { projects } from "./addingProjectDOM"
 import { addProjectToStorage } from './addingProjectDOM'
 
@@ -104,13 +104,13 @@ function focusEffects(click) {
     currentCat.style.display = 'block';
     pCat.style.display = 'none';
 
-    if (nowActive.id === 'important') {
+    if (nowActive.id === 'project-important') {
         cat.stared();
-    } else if (nowActive.id === 'all') {
+    } else if (nowActive.id === 'project-all') {
         cat.all();
-    } else if (nowActive.id === 'today') {
+    } else if (nowActive.id === 'project-today') {
         cat.today();
-    } else if (nowActive.id === 'upcoming') {
+    } else if (nowActive.id === 'project-upcoming') {
         cat.upcoming();
     }    
 }

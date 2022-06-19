@@ -1,5 +1,6 @@
 import { addTaskProjects } from "./taskPopUp"
-import { arr, deleteObject } from "./taskobjectfunctions"
+import { deleteObject } from "./taskobjectfunctions"
+import { arr } from "./addingtaskDOM"
 
 
 

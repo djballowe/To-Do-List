@@ -1,4 +1,5 @@
-import { addToStorage, arr } from "./taskobjectfunctions"
+import { addToStorage } from "./taskobjectfunctions"
+import { arr } from "./addingtaskDOM"
 
 function important() {
     const changePrio = (index, data) => {

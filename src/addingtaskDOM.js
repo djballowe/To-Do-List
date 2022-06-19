@@ -1,6 +1,6 @@
 
 
-let arr = JSON.parse(localStorage.getItem('tasks')) || [];
+export let arr = JSON.parse(localStorage.getItem('tasks')) || [];
 
 // adding tasks to the dom
 const elementFactory = (type, attributes, text) => {
