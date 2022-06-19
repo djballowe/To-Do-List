@@ -24,13 +24,10 @@ function getData() {
             const projectCheck = document.getElementById(`cat-project-${projects[i]}`);
             if (projectCheck.style.display === 'block') {
                 arr.push(taskCreator(title, description, date, projects[i]));
-            } else {
-                arr.push(taskCreator(title, description, date));
             }
         }
-    } else {
-        arr.push(taskCreator(title, description, date));
     }
+    arr.push(taskCreator(title, description, date));
 }
 
 function addToStorage() {
