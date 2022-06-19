@@ -124,9 +124,14 @@ function focusEffects(click, index) {
         
         const currentCat = document.getElementById(`cat-${nowActive.id}`);
         const pCat = document.getElementById(`cat-${active.id}`);
-        
-        currentCat.style.display = 'block';
-        pCat.style.display = 'none';
+
+        if (currentCat === pCat) {
+            currentCat.style.display = 'block';
+            pCat.style.display = 'block';
+        } else {
+            currentCat.style.display = 'block';
+            pCat.style.display = 'none';
+        }
 
         if (nowActive.id === 'project-important') {
             cat.stared();
