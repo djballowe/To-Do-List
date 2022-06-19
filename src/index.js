@@ -6,7 +6,7 @@ import { arr } from "./addingtaskDOM"
 import { completed } from "./completed"
 import { important } from "./important"
 import { taskIconFunctions } from "./editanddeleteDOM"
-import { projectDom, getProjects, addProjectToStorage, clearProjectDom } from "./addingProjectDOM"
+import { projectDom, getProjects, addProjectToStorage, clearProjectDom, deleteProjectDom } from "./addingProjectDOM"
 import { doneTask } from "./completed"
 import { projects } from "./addingProjectDOM"
 
@@ -44,7 +44,8 @@ document.querySelector('body').addEventListener('click', function(e) {
     const id = e.target.id;
     const data = e.target.getAttribute('data');
     const index = e.target.getAttribute('index');
-    const input = e.target.getAttribute('input');
+
+    
     
 
     switch (id) {
@@ -117,7 +118,9 @@ document.querySelector('body').addEventListener('click', function(e) {
         case 'edit':
             editDelete.edit(index);
             break;
-
+        case 'project-trash':
+            deleteProjectDom(index, id);
+            break;
     }
 })
 
