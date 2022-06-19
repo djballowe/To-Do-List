@@ -401,6 +401,11 @@ body {
     align-items: center;
 }
 
+.project-trash {
+    display: flex;
+    align-items: center;
+}
+
 .grid {
     display: flex;
     align-items: center;

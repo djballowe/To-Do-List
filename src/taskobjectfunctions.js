@@ -1,4 +1,4 @@
-import { projects } from "./addingProjectDOM";
+import { addProjectToStorage, projects } from "./addingProjectDOM";
 import { arr } from "./addingtaskDOM";
 
 
@@ -41,6 +41,7 @@ function deleteObject(index) {
     arr.splice(index, 1);
     localStorage.clear();
     addToStorage();
+    addProjectToStorage();
 }
 
 

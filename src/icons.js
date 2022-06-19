@@ -8,7 +8,7 @@ import { addProjectToStorage } from './addingProjectDOM'
 
 export let iconClass = JSON.parse(localStorage.getItem('categories')) || [{
     id: 'project-all',
-    class: 'icons-active'
+    class: 'icons'
 }, {
     id: 'project-important',
     class: 'icons'
@@ -96,12 +96,11 @@ function catagories() {
 const cat = catagories();
 
 function focusEffects(click, index) {
-    
+
     const icon = document.getElementById(click);
     const active = iconClass.find(e => e.class === 'icons-active');
     const nowActive = iconClass.find(e => e.id === `${click}`);
     const highlight = document.getElementById(`${active.id}`);
-    
     
         
         active.class = 'icons';
@@ -111,10 +110,14 @@ function focusEffects(click, index) {
         highlight.removeAttribute('class');
         highlight.classList.add(active.class);
 
-        if (icon.getAttribute('type') === 'project') {
+        if (highlight.getAttribute('type') === 'project' && icon.getAttribute('type') === 'project') {
+            highlight.classList.add('new-project');
             icon.classList.add('new-project');
+            console.log('doubles')
         } else if (highlight.getAttribute('type') === 'project') {
             highlight.classList.add('new-project');
+        } else if (icon.getAttribute('type') === 'project') {
+            icon.classList.add('new-project');
         }
 
         // switch the category visually along with the focus effect
@@ -137,5 +140,15 @@ function focusEffects(click, index) {
             cat.dynamicProjects(projects[index]);
         } 
 }
+
+function focusOnStart() {
+    let click = 'project-all'
+    if (iconClass.indexOf('icons-active') === -1) {
+        iconClass[0].class = 'icons-active';
+        focusEffects(click);
+    }
+}
+
+focusOnStart();
 
 export { focusEffects, catagories };

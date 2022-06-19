@@ -1,5 +1,6 @@
 import { elementFactory } from "./addingtaskDOM"
 import { iconClass } from "./icons"
+import { addToStorage } from "./taskobjectfunctions";
 
 
 
@@ -44,6 +45,13 @@ function clearProjectDom() {
     }
 }
 
+function deleteProjectDom(index) {
+    projects.splice(index, 1);
+    localStorage.clear();
+    addToStorage();
+    addProjectToStorage();
+}
+
 function projectDom() {
     const container = document.querySelector('.project-select');
     const newCatContainer = document.querySelector('.all');
@@ -56,7 +64,7 @@ function projectDom() {
         document.querySelector(`#name-${index}`).appendChild(elementFactory('div', {id: `grid-${index}`, index: `${index}`, class: 'grid'}));
         document.querySelector(`#grid-${index}`).appendChild(elementFactory('img', {class: 'white-png', src: '../src/grid-white.png', index: `${index}`}));
         document.querySelector(`#name-${index}`).appendChild(elementFactory('p', 'none', `${text}`));
-        document.querySelector(`#project-${projects[index]}`).appendChild(elementFactory('div', {id: `project-trash-${index}`, class: 'trash'}));
+        document.querySelector(`#project-${projects[index]}`).appendChild(elementFactory('div', {id: `project-trash-${index}`, class: 'project-trash'}));
         document.querySelector(`#project-trash-${index}`).appendChild(elementFactory('img', {class: 'white-png', src: '../src/trash-white.png', index: `${index}`}));
 
         // make a new category title
