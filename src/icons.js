@@ -111,6 +111,12 @@ function focusEffects(click, index) {
         highlight.removeAttribute('class');
         highlight.classList.add(active.class);
 
+        if (icon.getAttribute('type') === 'project') {
+            icon.classList.add('new-project');
+        } else if (highlight.getAttribute('type') === 'project') {
+            highlight.classList.add('new-project');
+        }
+
         // switch the category visually along with the focus effect
         
         const currentCat = document.getElementById(`cat-${nowActive.id}`);

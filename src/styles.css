@@ -119,6 +119,10 @@ body {
     margin-left: 10px;
 }
 
+.icons-active p {
+    margin-left: 10px;
+}
+
 .project-container {
     display: flex;
     align-items: center;
