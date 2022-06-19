@@ -93,7 +93,7 @@ document.querySelector('body').addEventListener('click', function(e) {
 
     switch (data) {
         case 'organize':
-            focusEffects(id, input);
+            focusEffects(id, index);
             break;
         case 'non-completed':
             check.changeCheck(id, index);

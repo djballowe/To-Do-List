@@ -74,17 +74,28 @@ function catagories() {
         }
     }
 
+    const dynamicProjects = (project) => {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].project === project) {
+                document.getElementById(`task-${i}`).style.display = 'flex';
+            } else {
+                document.getElementById(`task-${i}`).style.display = 'none';
+            }
+        }
+    }
+
     return {
         all,
         stared,
         today,
-        upcoming
+        upcoming,
+        dynamicProjects
     }
 }
 
 const cat = catagories();
 
-function focusEffects(click) {
+function focusEffects(click, index) {
     console.log(iconClass);
     const icon = document.getElementById(click);
     const active = iconClass.find(e => e.class === 'icons-active');
@@ -112,7 +123,9 @@ function focusEffects(click) {
         cat.today();
     } else if (nowActive.id === 'project-upcoming') {
         cat.upcoming();
-    }    
+    } else if (nowActive.id === `project-${projects[index]}`) {
+        cat.dynamicProjects(projects[index]);
+    } 
 }
 
 export { focusEffects, catagories };
