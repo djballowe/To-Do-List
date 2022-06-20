@@ -64,9 +64,6 @@ function deleteProjectDom(index, id) {
     const parentid = document.getElementById(id).parentElement.id;
     const name = parent.getAttribute('name');
 
-    console.log(name);
-    console.log(parentid)
-
     // delete the category as well
 
     const getRid = document.getElementById(`cat-project-${projects[index]}`);
@@ -78,24 +75,38 @@ function deleteProjectDom(index, id) {
             break;
         }
     }
+
+    console.log(name)
     
     // delete all tasks associated with project
     
     for (let i = 0; i < arr.length; i++) {
-        console.log(arr.length)
         if (arr[i].project === name) {
             taskDomUpdate.trash(i);
         }
     }
 
-    for (let i = 0; i < arr.length; i++) {
-        deleteObject(i);
+    function fuckThis() {
+        let count = 0;
+        let index = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].project = name) {
+                count ++;
+                index.push(i);
+            }
+        }
+        for (let i = 0; i < count; i++) {
+            for (let j = 0; j < index.length; j++) {
+                deleteObject(j);
+            }
+        }
     }
     
 
     projects.splice(index, 1);
     clearProjectDom();
     clearCatDom();
+    fuckThis();
     localStorage.clear();
     addToStorage();
     addProjectToStorage();
