@@ -1,6 +1,7 @@
-import { arr, elementFactory } from "./addingtaskDOM"
+import { arr, elementFactory, taskDOM } from "./addingtaskDOM"
 import { focusOnStart, iconClass } from "./icons"
 import { addToStorage, deleteObject } from "./taskobjectfunctions";
+import { taskIconFunctions } from "./editanddeleteDOM";
 
 
 
@@ -58,16 +59,10 @@ function clearCatDom() {
 }
 
 function deleteProjectDom(index, id) {
+    const taskDomUpdate = taskIconFunctions();
     const parent = document.getElementById(id).parentElement;
     const parentid = document.getElementById(id).parentElement.id;
     const name = parent.getAttribute('name');
-
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].project === name) {
-            deleteObject(i);
-        } 
-    }
 
     console.log(name);
     console.log(parentid)
@@ -79,11 +74,25 @@ function deleteProjectDom(index, id) {
 
     for (let i = 0; i < iconClass.length; i++) {
         if (iconClass[i].id === parentid) {
-            console.log('deleted')
             iconClass.splice(i, 1);
             break;
         }
-    } 
+    }
+    
+    // delete all tasks associated with project
+    
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr.length)
+        if (arr[i].project === name) {
+            taskDomUpdate.trash(i);
+        }
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        deleteObject(i);
+    }
+    
+
     projects.splice(index, 1);
     clearProjectDom();
     clearCatDom();
