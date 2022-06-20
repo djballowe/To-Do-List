@@ -96,7 +96,11 @@ function catagories() {
 const cat = catagories();
 
 function focusEffects(click, index) {
-
+    if (iconClass.indexOf('icons-active') === -1) {
+        console.log('test');
+    }
+    
+    
     const icon = document.getElementById(click);
     const active = iconClass.find(e => e.class === 'icons-active');
     const nowActive = iconClass.find(e => e.id === `${click}`);
