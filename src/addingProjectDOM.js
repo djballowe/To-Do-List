@@ -70,17 +70,20 @@ function deleteProjectDom(index, id) {
     }
 
     console.log(name);
+    console.log(parentid)
 
     // delete the category as well
 
     const getRid = document.getElementById(`cat-project-${projects[index]}`);
     getRid.remove();
 
-    const catLocation = iconClass.indexOf(parentid);
-    if (catLocation > -1) {
-        console.log('deleted')
-        iconClass.splice(catLocation, 1);
-    }
+    for (let i = 0; i < iconClass.length; i++) {
+        if (iconClass[i].id === parentid) {
+            console.log('deleted')
+            iconClass.splice(i, 1);
+            break;
+        }
+    } 
     projects.splice(index, 1);
     clearProjectDom();
     localStorage.clear();

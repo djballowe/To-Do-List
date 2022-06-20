@@ -101,22 +101,29 @@ function focusEffects(click, index) {
     const active = iconClass.find(e => e.class === 'icons-active');
     const nowActive = iconClass.find(e => e.id === `${click}`);
     const highlight = document.getElementById(`${active.id}`);
+
+    console.log(icon)
+    console.log(highlight)
+    console.log(active)
+
     
         
         active.class = 'icons';
         nowActive.class = 'icons-active';
         icon.removeAttribute('class');
         icon.classList.add(nowActive.class);
-        highlight.removeAttribute('class');
-        highlight.classList.add(active.class);
+        
+        if (highlight !== null) {
+            highlight.removeAttribute('class');
+            highlight.classList.add(active.class);
+        }
 
-        if (highlight.getAttribute('type') === 'project' && icon.getAttribute('type') === 'project') {
+        if (highlight !== null && highlight.getAttribute('type') === 'project' && icon.getAttribute('type') === 'project') {
             highlight.classList.add('new-project');
             icon.classList.add('new-project');
-            console.log('doubles')
-        } else if (highlight.getAttribute('type') === 'project') {
+        } else if (highlight !== null && highlight.getAttribute('type') === 'project') {
             highlight.classList.add('new-project');
-        } else if (icon.getAttribute('type') === 'project') {
+        } else if (highlight !== null && icon.getAttribute('type') === 'project') {
             icon.classList.add('new-project');
         }
 
@@ -128,7 +135,7 @@ function focusEffects(click, index) {
         if (currentCat === pCat) {
             currentCat.style.display = 'block';
             pCat.style.display = 'block';
-        } else {
+        } else if (currentCat !== pCat && pCat !== null){
             currentCat.style.display = 'block';
             pCat.style.display = 'none';
         }
