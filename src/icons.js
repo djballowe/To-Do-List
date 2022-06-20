@@ -96,9 +96,8 @@ function catagories() {
 const cat = catagories();
 
 function focusEffects(click, index) {
-    if (iconClass.indexOf('icons-active') === -1) {
-        console.log('test');
-    }
+    
+    console.log(click)
     
     
     const icon = document.getElementById(click);
@@ -167,4 +166,4 @@ function focusOnStart() {
 
 focusOnStart();
 
-export { focusEffects, catagories };
+export { focusEffects, catagories, focusOnStart };

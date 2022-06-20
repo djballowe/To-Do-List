@@ -1,5 +1,5 @@
 import { arr, elementFactory } from "./addingtaskDOM"
-import { iconClass } from "./icons"
+import { focusOnStart, iconClass } from "./icons"
 import { addToStorage, deleteObject } from "./taskobjectfunctions";
 
 
@@ -86,10 +86,12 @@ function deleteProjectDom(index, id) {
     } 
     projects.splice(index, 1);
     clearProjectDom();
+    clearCatDom();
     localStorage.clear();
     addToStorage();
     addProjectToStorage();
     projectDom();
+    focusOnStart();
 }
 
 function projectDom() {
