@@ -86,7 +86,7 @@ function deleteProjectDom(index, id) {
         }
     }
 
-    function fuckThis() {
+    function findAndDeleteProject() {
         let count = 0;
         let index = [];
         for (let i = 0; i < arr.length; i++) {
@@ -102,11 +102,10 @@ function deleteProjectDom(index, id) {
         }
     }
     
-
     projects.splice(index, 1);
     clearProjectDom();
     clearCatDom();
-    fuckThis();
+    findAndDeleteProject();
     localStorage.clear();
     addToStorage();
     addProjectToStorage();

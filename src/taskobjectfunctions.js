@@ -19,21 +19,19 @@ function getData() {
     const date = document.getElementById('date').value;
     const num = document.getElementById('project-select').childElementCount;
 
-    if (num > 0) {
-        for (let i = 0; i < projects.length; i++) {
-            const projectCheck = document.getElementById(`cat-project-${projects[i]}`);
+    for (let i = 0; i < projects.length; i++) {
+        const projectCheck = document.getElementById(`cat-project-${projects[i]}`).style.display;
+       
+        if (projectCheck === 'block') {
             console.log(projectCheck);
-            if (projectCheck.style.display === 'block') {
-                arr.push(taskCreator(title, description, date, projects[i]));
-                console.log('test');
-                break;
-            } else {
-                continue;
-            }
+            arr.push(taskCreator(title, description, date, projects[i]));
+            console.log('test');
+            break;
+        } else {
+            continue;
         }
-    } else {
-        arr.push(taskCreator(title, description, date));
     }
+    arr.push(taskCreator(title, description, date));
 }
 
 function addToStorage() {
