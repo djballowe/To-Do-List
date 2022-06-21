@@ -1,7 +1,7 @@
 import { addTaskProjects } from "./taskPopUp"
 import { focusEffects, catagories, storageArray, iconClass } from "./icons"
 import { deleteObject, getData, addToStorage } from "./taskobjectfunctions"
-import { taskDOM, clear } from "./addingtaskDOM"
+import { taskDOM, clear, displayCheck } from "./addingtaskDOM"
 import { arr } from "./addingtaskDOM"
 import { completed } from "./completed"
 import { important } from "./important"
@@ -61,6 +61,7 @@ document.querySelector('body').addEventListener('click', function(e) {
             clear();
             taskDOM();
             addToStorage();
+            displayCheck();
             break;
         case 'project-add':
             task.project();

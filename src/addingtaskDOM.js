@@ -1,4 +1,4 @@
-
+import { projects } from "./addingProjectDOM";
 
 export let arr = JSON.parse(localStorage.getItem('tasks')) || [];
 
@@ -22,6 +22,30 @@ const clear = () => {
         while (child) {
             container.removeChild(child);
             child = container.lastElementChild;
+        }
+    }
+}
+
+function displayCheck() {
+    const num = document.querySelector('.new-cats').childElementCount;
+    const all = document.getElementById('cat-project-all');
+    console.log(num)
+
+    for (let i = 0; i < num; i++) {
+        const titles = document.getElementById(`cat-project-${projects[i]}`);
+        if (titles.style.display === 'block') {
+            const titlesText = titles.text;
+            console.log(titlesText)
+            console.log(titlesText)
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].projects !== titlesText) {
+                    document.getElementById(`task-${i}`).style.display = 'none';
+                } else if (arr[i].projects === undefined) {
+                    document.getElementById(`task-${i}`).style.display = 'none';
+                }
+            }
+        } else {
+            console.log('fail')
         }
     }
 }
@@ -55,4 +79,4 @@ function taskDOM() {
 
 taskDOM();
 
-export { taskDOM, clear, elementFactory }
+export { taskDOM, clear, elementFactory, displayCheck }

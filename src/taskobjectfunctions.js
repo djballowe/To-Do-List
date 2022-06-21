@@ -19,22 +19,23 @@ function getData() {
     const date = document.getElementById('date').value;
     const num = document.getElementById('project-select').childElementCount;
 
-        for (let i = 0; i < projects.length; i++) {
-            const projectCheck = document.getElementById(`cat-project-${projects[i]}`).style.display;
+    if (document.getElementById('cat-project-all').style.display === 'block') {
+        arr.push(taskCreator(title, description, date));
+    } 
+    
+    for (let i = 0; i < projects.length; i++) {
+        const projectCheck = document.getElementById(`cat-project-${projects[i]}`).style.display;
         
-            if (projectCheck === 'block') {
-                console.log(projectCheck);
-                arr.push(taskCreator(title, description, date, projects[i]));
-                console.log('test');
-                break;
-            } else {
-                continue;
-            }
+        if (projectCheck === 'block') {
+            console.log(projectCheck);
+            arr.push(taskCreator(title, description, date, projects[i]));
+            console.log('test');
+            break;
+        } else {
+            continue;
         }
-        if (document.getElementById('cat-project-all').style.display === 'block') {
-            arr.push(taskCreator(title, description, date));
-        } 
-    }    
+    }
+}    
 
 function addToStorage() {
     localStorage.setItem('tasks', JSON.stringify(arr));
