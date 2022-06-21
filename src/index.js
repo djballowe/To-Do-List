@@ -93,12 +93,12 @@ document.querySelector('body').addEventListener('click', function(e) {
             focusEffects(id, index);
             break;
         case 'non-completed':
-            check.changeCheck(id, index);
             check.completedArray(index);
+            check.changeCheck(index);
             break;
         case 'completed':
-            check.changeCheck(id, index);
             check.uncompletedArray(index);
+            check.changeCheck(index);
             break;
         case 'not-important':
             priority.changePrio(index, data);

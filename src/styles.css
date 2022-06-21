@@ -242,6 +242,17 @@ body {
     background-position: center;
 }
 
+.nocheck {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 20px;
+    background-color: transparent;
+    border: solid black 2px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .project-text p {
     margin: 5px 0;
     margin-left: 10px;
@@ -443,6 +454,10 @@ body {
 }
 
 #cat-project-today {
+    display: none;
+}
+
+#cat-project-completed {
     display: none;
 }
 
