@@ -1,18 +1,10 @@
 import { projects } from "./addingProjectDOM";
+import { elementFactory } from "./addingProjectDOM";
 
 export let arr = JSON.parse(localStorage.getItem('tasks')) || [];
 
 // adding tasks to the dom
-const elementFactory = (type, attributes, text) => {
-    const create = document.createElement(type);
-    create.textContent = text;
-    if (attributes !== 'none') {
-        for (let key in attributes) {
-            create.setAttribute(key, attributes[key]);
-        }
-    }
-    return create;
-}
+
 
 const clear = () => {
     const container = document.querySelector('.tasks');
@@ -34,19 +26,15 @@ function displayCheck() {
     for (let i = 0; i < num; i++) {
         const titles = document.getElementById(`cat-project-${projects[i]}`);
         if (titles.style.display === 'block') {
-            const titlesText = titles.text;
-            console.log(titlesText)
-            console.log(titlesText)
+            const titleText = projects[i];
             for (let i = 0; i < arr.length; i++) {
-                if (arr[i].projects !== titlesText) {
+                if (arr[i].project !== titleText) {
                     document.getElementById(`task-${i}`).style.display = 'none';
-                } else if (arr[i].projects === undefined) {
-                    document.getElementById(`task-${i}`).style.display = 'none';
+                } else {
+                    document.getElementById(`task-${i}`).style.display = 'flex';
                 }
             }
-        } else {
-            console.log('fail')
-        }
+        }       
     }
 }
 
@@ -79,4 +67,4 @@ function taskDOM() {
 
 taskDOM();
 
-export { taskDOM, clear, elementFactory, displayCheck }
+export { taskDOM, clear, displayCheck }

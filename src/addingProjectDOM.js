@@ -1,4 +1,4 @@
-import { arr, elementFactory, taskDOM } from "./addingtaskDOM"
+import { arr } from "./addingtaskDOM"
 import { focusOnStart, iconClass } from "./icons"
 import { addToStorage, deleteObject } from "./taskobjectfunctions";
 import { taskIconFunctions } from "./editanddeleteDOM";
@@ -7,6 +7,17 @@ import { taskIconFunctions } from "./editanddeleteDOM";
 
 export let projects = JSON.parse(localStorage.getItem('projects')) || [];
 
+
+const elementFactory = (type, attributes, text) => {
+    const create = document.createElement(type);
+    create.textContent = text;
+    if (attributes !== 'none') {
+        for (let key in attributes) {
+            create.setAttribute(key, attributes[key]);
+        }
+    }
+    return create;
+}
 
 function getProjects() {
     const catCreator = (id) => {
@@ -137,4 +148,4 @@ function projectDom() {
 
 projectDom();
 
-export { projectDom, getProjects, addProjectToStorage, clearProjectDom, deleteProjectDom, clearCatDom }
+export { projectDom, getProjects, addProjectToStorage, clearProjectDom, deleteProjectDom, clearCatDom, elementFactory }

@@ -2,7 +2,8 @@ import { format, isWithinInterval } from 'date-fns'
 import { add } from 'date-fns'
 import { arr } from "./addingtaskDOM"
 import { projects } from "./addingProjectDOM"
-import { addProjectToStorage } from './addingProjectDOM'
+
+
 
 // switching the active highlights
 
