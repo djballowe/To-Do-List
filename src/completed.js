@@ -2,9 +2,6 @@ import { arr } from "./addingtaskDOM"
 import { addToStorage } from "./taskobjectfunctions"
 import { addProjectToStorage } from "./addingProjectDOM";
 
-
-export let doneTask = [];
-
 function completed() {
     const changeCheck = (id, index) => {
         const button = document.getElementById(`${id}`);
@@ -24,16 +21,14 @@ function completed() {
     }
 
     const completedArray = (index) => {
-        doneTask.push(arr[index]);
-        arr.splice(index, 1);
+        arr[index].completed = true
         localStorage.clear();
         addToStorage();
         addProjectToStorage();
     }
 
     const uncompletedArray = (index) => {
-        arr.push(doneTask[index]);
-        doneTask.splice(index, 1);
+        arr[index].completed = false
         localStorage.clear();
         addToStorage();
         addProjectToStorage();

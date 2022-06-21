@@ -31,10 +31,6 @@ function printArray() {
     console.log(arr);
 }
 
-function printCompleted() {
-    console.log(doneTask);
-}
-
 function printProject() {
     console.log(projects);
     console.log(iconClass);
@@ -85,9 +81,6 @@ document.querySelector('body').addEventListener('click', function(e) {
             break;
         case 'print-array':
             printArray();
-            break;
-        case 'print-done':
-            printCompleted();
             break;
         case 'print-projects':
             printProject();

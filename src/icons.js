@@ -17,7 +17,7 @@ export let iconClass = JSON.parse(localStorage.getItem('categories')) || [{
     id: 'project-today',
     class: 'icons'
 }, {
-    id: 'project-upcoming',
+    id: 'project-completed',
     class: 'icons'
 }];
 
@@ -58,16 +58,9 @@ function catagories() {
         }
     }
 
-    const upcoming = () => {
+    const completed = () => {
         for (let i = 0; i < arr.length; i++) {
-            let year = parseInt(arr[i].date);
-            let month = parseInt(arr[i].date[5] + arr[i].date[6]) - 1;
-            let day = parseInt(arr[i].date[8] + arr[i].date[9]);
-            
-            if (isWithinInterval(new Date(year, month, day), {
-                start: tomorrow,
-                end: weekLater
-            }) === true) {
+            if (arr[i].completed = true) {
                 document.getElementById(`task-${i}`).style.display = 'flex';
             } else {
                 document.getElementById(`task-${i}`).style.display = 'none';
@@ -89,7 +82,7 @@ function catagories() {
         all,
         stared,
         today,
-        upcoming,
+        completed,
         dynamicProjects
     }
 }
@@ -141,8 +134,8 @@ function focusEffects(click, index) {
             cat.all();
         } else if (nowActive.id === 'project-today') {
             cat.today();
-        } else if (nowActive.id === 'project-upcoming') {
-            cat.upcoming();
+        } else if (nowActive.id === 'project-completed') {
+            cat.completed();
         } else if (nowActive.id === `project-${projects[index]}`) {
             cat.dynamicProjects(projects[index]);
         } 

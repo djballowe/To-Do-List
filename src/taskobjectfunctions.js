@@ -9,6 +9,7 @@ function taskCreator(task, about, day, project) {
         description: about,
         date: day,
         importance: false,
+        completed: false,
         project: project
     }
 }
